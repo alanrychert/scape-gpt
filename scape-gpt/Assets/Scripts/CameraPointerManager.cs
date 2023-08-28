@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class CameraPointerManager : MonoBehaviour
 {
     public static CameraPointerManager Instance;
+    public event Action<GameObject> OnNewObjectDetected;
+    public event Action OnNoObjectDetected; 
 
     [SerializeField] private GameObject pointer;
     [SerializeField] private float maxDistancePointer = 4.5f;
@@ -12,6 +15,9 @@ public class CameraPointerManager : MonoBehaviour
     [SerializeField] private float distancePointerObject = 0.95f;
 
     private const float _maxDistance = 10;
+
+
+    private GameObject PlayerHand; 
     private GameObject _gazedAtObject = null;
 
     private readonly string interactableTag = "Interactable";
@@ -28,10 +34,13 @@ public class CameraPointerManager : MonoBehaviour
         {
             Instance = this;
         }
+        pointer.transform.localScale = Vector3.one * 0.1f;
+        pointer.transform.localPosition = new Vector3(0,0,maxDistancePointer);
     }
 
     private void Start(){
         GazeManager.Instance.OnGazeSelection += GazeSelection;
+        PlayerHand = this.transform.GetChild(0).gameObject;
     }
 
     private void GazeSelection(){
@@ -52,13 +61,13 @@ public class CameraPointerManager : MonoBehaviour
             // GameObject detected in front of the camera.
             if (_gazedAtObject != hit.transform.gameObject)
             {
-                // New GameObject.
                 _gazedAtObject?.SendMessage("OnPointerExitXR", null, SendMessageOptions.DontRequireReceiver);
                 _gazedAtObject = hit.transform.gameObject;
                 _gazedAtObject.SendMessage("OnPointerEnterXR", null, SendMessageOptions.DontRequireReceiver);
+                OnNewObjectDetected?.Invoke(_gazedAtObject);
                 if (hit.transform.CompareTag(interactableTag))
                     GazeManager.Instance.StartGazeSelection();
-            }    
+            }
             if (!hit.transform.CompareTag("Untagged")) {    
                 PointerOnGaze(hit.point);
             }    
@@ -69,17 +78,18 @@ public class CameraPointerManager : MonoBehaviour
         else
         {
             // No GameObject detected in front of the camera.
-            _gazedAtObject?.SendMessage("OnPointerExitXR", null, SendMessageOptions.DontRequireReceiver);
-            _gazedAtObject = null;
-            pointerOutGaze();
+            if (_gazedAtObject != null){
+                //The last detected object is no more detected
+                OnNoObjectDetected?.Invoke();
+                _gazedAtObject?.SendMessage("OnPointerExitXR", null, SendMessageOptions.DontRequireReceiver);
+                _gazedAtObject = null;
+                pointerOutGaze();
+            }
+            
         }
 
-        // Checks for screen touches.
-        if (Google.XR.Cardboard.Api.IsTriggerPressed)
-        {
-            _gazedAtObject?.SendMessage("OnPointerClickXR", null, SendMessageOptions.DontRequireReceiver);
-        }
     }
+
 
     private void PointerOnGaze(Vector3 hitPoint){
         float scaleFactor = scaleSize * Vector3.Distance(transform.position, hitPoint);
@@ -103,4 +113,5 @@ public class CameraPointerManager : MonoBehaviour
 
         return result;
     }
+
 }

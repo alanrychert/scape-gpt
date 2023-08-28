@@ -25,19 +25,11 @@ using TMPro;
 /// </summary>
 public class ObjectReaction : MonoBehaviour
 {
-    /// <summary>
-    /// The material to use when this object is inactive (not being gazed at).
-    /// </summary>
-    public Material InactiveMaterial;
-
-    /// <summary>
-    /// The material to use when this object is active (gazed at).
-    /// </summary>
-    public Material GazedAtMaterial;
     public SpeechTextManager speechTextManager;
     [SerializeField] private TextMeshProUGUI uIText;
 
     private Renderer _myRenderer;
+    private Color originalColor;
     public ChatGPT chatGPT;
 
     /// <summary>
@@ -46,7 +38,7 @@ public class ObjectReaction : MonoBehaviour
     public void Start()
     {
         _myRenderer = GetComponent<Renderer>();
-        SetMaterial(false);
+        originalColor = _myRenderer.material.color;
     }
 
     /// <summary>
@@ -54,8 +46,8 @@ public class ObjectReaction : MonoBehaviour
     /// </summary>
     public void OnPointerEnterXR()
     {
-        SetMaterial(true);
-        //uIText.text = "estas mirando el cuadrado verde";
+        SetTransparent(true);
+        
     }
 
     /// <summary>
@@ -63,8 +55,7 @@ public class ObjectReaction : MonoBehaviour
     /// </summary>
     public void OnPointerExitXR()
     {
-        SetMaterial(false);
-        //uIText.text = "dejaste de mirar cuadrado verde";
+        SetTransparent(false);
     }
 
     /// <summary>
@@ -74,10 +65,36 @@ public class ObjectReaction : MonoBehaviour
     public void OnPointerClickXR()
     {
         //uIText.text = "cliqueaste el cuadrado verde";
-        chatGPT.MakeRequest("hola chatgpt");
         speechTextManager.StartSpeaking("holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
     }
 
+    public void OnFire1PressedXR(){
+        Color newColor = originalColor;
+        newColor.b = 1f;
+        newColor.r = 0f;
+        newColor.g = 0f;
+        _myRenderer.material.color = newColor;
+    }
+
+    public void OnFire2PressedXR(){
+        Color newColor = originalColor;
+        newColor.r = 1f;
+        newColor.g = 0f;
+        newColor.b = 0f;
+        _myRenderer.material.color = newColor;
+    }
+
+    public void OnFire3PressedXR(){
+        _myRenderer.material.color = originalColor;
+    }
+
+    public void OnJumpPressedXR(){
+        Color newColor = originalColor;
+        newColor.b = 0.3f;
+        newColor.r = 0.3f;
+        newColor.g = 0.3f;
+        _myRenderer.material.color = newColor;
+    }
     /// <summary>
     /// Sets this instance's material according to gazedAt status.
     /// </summary>
@@ -85,11 +102,11 @@ public class ObjectReaction : MonoBehaviour
     /// <param name="gazedAt">
     /// Value `true` if this object is being gazed at, `false` otherwise.
     /// </param>
-    private void SetMaterial(bool gazedAt)
+    private void SetTransparent(bool gazedAt)
     {
-        if (InactiveMaterial != null && GazedAtMaterial != null)
-        {
-            _myRenderer.material = gazedAt ? GazedAtMaterial : InactiveMaterial;
-        }
+        Debug.Log("cambie la transparencia");
+        Color newColor = originalColor;
+        newColor.a = 0.5f;
+        _myRenderer.material.color = gazedAt ? newColor : originalColor;
     }
 }

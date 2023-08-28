@@ -9,4 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/CardBoardGazeSelection.unity
     guid: 89990e7a0d789254d98567ba02e00afe
   m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 967c6271e84318f4ea9e1e518517ce7c, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8eb2291a773728242b36c8c0714f5d15, type: 2}
