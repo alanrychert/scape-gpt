@@ -12,7 +12,9 @@ public class PlayerController : MonoBehaviour
     public GameObject playerHand;
     public CameraPointerManager playerCamera;
     private readonly string grabbableTag = "Grabbable";
+    private readonly string interactableTag = "Interactable";
     private readonly string keyTag = "Key";
+    public string roomInformation { get; set; }
 
     private CharacterController controller;
     // Start is called before the first frame update
@@ -21,6 +23,7 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         playerCamera.OnNewObjectDetected += HandleNewObjectDetected;
         playerCamera.OnNoObjectDetected += HandleNoObjectDetected;
+        GazeManager.Instance.OnGazeSelection += GazeSelection;
     }
 
     // Update is called once per frame
@@ -43,7 +46,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
             if (Input.GetButtonDown("Fire2"))
-                _gazedObject?.SendMessage("OnFire2PressedXR", null, SendMessageOptions.DontRequireReceiver);
+                _gazedObject?.SendMessage("OnFire2PressedXR", this, SendMessageOptions.DontRequireReceiver);
             if (Input.GetButtonDown("Fire3"))
                 _gazedObject?.SendMessage("OnFire3PressedXR", null, SendMessageOptions.DontRequireReceiver);
             if (Input.GetButtonDown("Jump"))
@@ -60,15 +63,35 @@ public class PlayerController : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    private void HandleNewObjectDetected(GameObject detectedObject)
+    private void HandleNewObjectDetected(RaycastHit detected)
     {
-        _gazedObject = detectedObject;
-        Debug.Log("Object detected: " + detectedObject.name);
+        if (_gazedObject != detected.transform.gameObject){
+            _gazedObject?.SendMessage("OnPointerExitXR", this, SendMessageOptions.DontRequireReceiver);
+            _gazedObject = detected.transform.gameObject;
+            _gazedObject.SendMessage("OnPointerEnterXR", null, SendMessageOptions.DontRequireReceiver);
+            Debug.Log("new object detected: ");
+            if (_gazedObject.CompareTag(interactableTag))
+                GazeManager.Instance.StartGazeSelection();
+        }
+        if (!detected.transform.CompareTag("Untagged")) {    
+                playerCamera.PointerOnGaze(detected.point);
+            }    
+            else{
+                playerCamera.pointerOutGaze();
+            }
+    }
+
+    private void GazeSelection(){
+        _gazedObject?.SendMessage("OnPointerClickXR", null, SendMessageOptions.DontRequireReceiver);
     }
 
     private void HandleNoObjectDetected()
     {
-        _gazedObject = null;
+        if (_gazedObject != null){
+                _gazedObject?.SendMessage("OnPointerExitXR", null, SendMessageOptions.DontRequireReceiver);
+                _gazedObject = null;
+                playerCamera.pointerOutGaze();
+        }
         Debug.Log("lost the detected object");
     }
 

@@ -29,6 +29,7 @@ public class ObjectReaction : MonoBehaviour
     [SerializeField] private TextMeshProUGUI uIText;
 
     private Renderer _myRenderer;
+    private bool _hasBeenSeen;
     private Color originalColor;
     public ChatGPT chatGPT;
 
@@ -39,6 +40,7 @@ public class ObjectReaction : MonoBehaviour
     {
         _myRenderer = GetComponent<Renderer>();
         originalColor = _myRenderer.material.color;
+        _hasBeenSeen = false;
     }
 
     /// <summary>
@@ -47,7 +49,12 @@ public class ObjectReaction : MonoBehaviour
     public void OnPointerEnterXR()
     {
         SetTransparent(true);
-        
+        if (!_hasBeenSeen){
+            _hasBeenSeen = true;
+            PlayerController playerController = FindObjectOfType<PlayerController>();
+            playerController.roomInformation += "holi";
+            Debug.Log(playerController.roomInformation);
+        }
     }
 
     /// <summary>
