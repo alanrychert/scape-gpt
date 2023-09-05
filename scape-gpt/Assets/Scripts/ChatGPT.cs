@@ -27,11 +27,7 @@ public class ChatGPT : MonoBehaviour
 
     private RequestBodyChatGPT requestBodyChatGPT;
     private ResponseBodyChatGPT responseBodyChatGPT;
-    private string promptHeader = "En este momento vas a actuar como si fueras el dueño de una sala de escape, que da pistas de no más de 10 palabras. Para responder a esta consulta solo podes tener en cuenta la informacion que te daré a continuacion:"
-
-    void Start(){
-        speechTextManager.StartSpeaking("bienvenido a la sala de escape");
-    }
+    private string promptHeader = "En este momento vas a actuar como si fueras el dueño de una sala de escape, que da pistas de no más de 10 palabras. Para responder a esta consulta solo podes tener en cuenta la informacion que te daré a continuacion:";
 
     // Send a request to the OpenAI GPT-3 API and return the response as a string
     private IEnumerator SendRequest(string input, System.Action<string> onComplete)
@@ -40,7 +36,7 @@ public class ChatGPT : MonoBehaviour
         // Set up the request body
         requestBodyChatGPT = new RequestBodyChatGPT();
         requestBodyChatGPT.model = "text-davinci-003";
-        requestBodyChatGPT.prompt = input + "En la habitación se encuentran los siguientes objetos:" + player.roomInformation;
+        requestBodyChatGPT.prompt = promptHeader + "En la habitación se encuentran los siguientes objetos:" + player.roomInformation + "la pregunta es:" + input;
         requestBodyChatGPT.max_tokens = maxResponseLength;
         requestBodyChatGPT.temperature = 0;
 
