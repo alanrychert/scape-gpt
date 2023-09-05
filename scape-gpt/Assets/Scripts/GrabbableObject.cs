@@ -6,13 +6,35 @@ public abstract class GrabbableObject : RoomObject, IInteractable
 {
     private bool isGrabbed;
 
-    void Start(){
-        isGrabbed=false;
+
+    protected override void Start(){
+        base.Start();
+        isGrabbed = false;
     }
-    public void Action1(){
-        isGrabbed=!isGrabbed;
+    public void OnFire1PressedXR(){
+        if (isGrabbed){
+            Debug.Log("va a caer");
+            fallToTheFloor();
+        }
+        else 
+            moveToPlayer();
     }
-    public abstract void Action2();
-    public abstract void Action3();
-    public abstract void Action4();
+    private void moveToPlayer(){
+        PlayerController player = FindObjectOfType<PlayerController>();
+        transform.SetParent(player.playerHand.transform);
+        transform.localPosition = new Vector3(0, 0, 0);
+        isGrabbed = true;
+        player.GrabObject(this);
+    }
+    private void fallToTheFloor(){
+        float fallSpeed = 0.1f; // Ajusta esta velocidad según tus necesidades
+        FindObjectOfType<PlayerController>().DropObject();
+        transform.SetParent(null);
+        while (transform.position.y > -2)
+            transform.Translate(Vector3.down * fallSpeed * Time.deltaTime);
+        isGrabbed = false;
+    }
+    public abstract void OnFire2PressedXR();
+    public abstract void OnFire3PressedXR();
+    public abstract void OnJumpPressedXR();
 }

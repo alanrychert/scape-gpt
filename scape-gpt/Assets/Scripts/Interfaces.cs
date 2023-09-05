@@ -1,7 +1,10 @@
 public interface IInteractable
 {
-    void Action1();
-    void Action2();
-    void Action3();
-    void Action4();
+    void OnFire1PressedXR();
+
+    void OnFire2PressedXR();
+
+    void OnFire3PressedXR();
+
+    void OnJumpPressedXR();
 }

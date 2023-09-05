@@ -8,12 +8,10 @@ public class PlayerController : MonoBehaviour
     private float Gravity = 10f;
     private bool hasGrabbedSomething;
     private GameObject _gazedObject;
-    private GameObject _grabbedObject;
+    private GrabbableObject _grabbedObject;
     public GameObject playerHand;
     public CameraPointerManager playerCamera;
-    private readonly string grabbableTag = "Grabbable";
     private readonly string interactableTag = "Interactable";
-    private readonly string keyTag = "Key";
     public string roomInformation { get; set; }
 
     private CharacterController controller;
@@ -24,6 +22,7 @@ public class PlayerController : MonoBehaviour
         playerCamera.OnNewObjectDetected += HandleNewObjectDetected;
         playerCamera.OnNoObjectDetected += HandleNoObjectDetected;
         GazeManager.Instance.OnGazeSelection += GazeSelection;
+        roomInformation = "";
     }
 
     // Update is called once per frame
@@ -32,18 +31,27 @@ public class PlayerController : MonoBehaviour
         PlayerMovement();
             if (Input.GetButtonDown("Fire1")){
                 if (!_grabbedObject){
-                    if(_gazedObject)
-                        if (_gazedObject.CompareTag(grabbableTag) || _gazedObject.CompareTag(keyTag)){
-                            _grabbedObject=_gazedObject;
-                            _grabbedObject.transform.SetParent(playerHand.transform);
-                            _grabbedObject.transform.localPosition = new Vector3(0, -0.1f, -0.1f);
-                        }
+                    Debug.Log(_grabbedObject);
+                    _gazedObject?.SendMessage("OnFire1PressedXR", this, SendMessageOptions.DontRequireReceiver);
                 }
                 else{
-                    _grabbedObject.transform.localPosition = new Vector3(0, 0, 2);
-                    _grabbedObject.transform.SetParent(null);
-                    _grabbedObject = null;
+                    Debug.Log(_grabbedObject);
+                    _grabbedObject?.SendMessage("OnFire1PressedXR", this, SendMessageOptions.DontRequireReceiver);
+                    
                 }
+                // if (!_grabbedObject){
+                //     if(_gazedObject)
+                //         if (_gazedObject.CompareTag(grabbableTag) || _gazedObject.CompareTag(keyTag)){
+                //             _grabbedObject=_gazedObject;
+                //             _grabbedObject.transform.SetParent(playerHand.transform);
+                //             _grabbedObject.transform.localPosition = new Vector3(0, -0.1f, -0.1f);
+                //         }
+                // }
+                // else{
+                //     _grabbedObject.transform.localPosition = new Vector3(0, 0, 2);
+                //     _grabbedObject.transform.SetParent(null);
+                //     _grabbedObject = null;
+                // }
             }
             if (Input.GetButtonDown("Fire2"))
                 _gazedObject?.SendMessage("OnFire2PressedXR", this, SendMessageOptions.DontRequireReceiver);
@@ -65,20 +73,24 @@ public class PlayerController : MonoBehaviour
 
     private void HandleNewObjectDetected(RaycastHit detected)
     {
-        if (_gazedObject != detected.transform.gameObject){
-            _gazedObject?.SendMessage("OnPointerExitXR", this, SendMessageOptions.DontRequireReceiver);
-            _gazedObject = detected.transform.gameObject;
-            _gazedObject.SendMessage("OnPointerEnterXR", null, SendMessageOptions.DontRequireReceiver);
-            Debug.Log("new object detected: ");
-            if (_gazedObject.CompareTag(interactableTag))
-                GazeManager.Instance.StartGazeSelection();
-        }
-        if (!detected.transform.CompareTag("Untagged")) {    
+        if (_grabbedObject && _grabbedObject != _gazedObject || !_grabbedObject){
+            if (_gazedObject != detected.transform.gameObject){
+                _gazedObject?.SendMessage("OnPointerExitXR", this, SendMessageOptions.DontRequireReceiver);
+                _gazedObject = detected.transform.gameObject;
+                _gazedObject.SendMessage("OnPointerEnterXR", null, SendMessageOptions.DontRequireReceiver);
+                Debug.Log("new object detected: ");
+                if (_gazedObject.CompareTag(interactableTag))
+                    GazeManager.Instance.StartGazeSelection();
+                else
+                    GazeManager.Instance.CancelGazeSelection();
+            }
+            if (!detected.transform.CompareTag("Untagged")) {    
                 playerCamera.PointerOnGaze(detected.point);
             }    
             else{
                 playerCamera.pointerOutGaze();
             }
+        }
     }
 
     private void GazeSelection(){
@@ -92,9 +104,14 @@ public class PlayerController : MonoBehaviour
                 _gazedObject = null;
                 playerCamera.pointerOutGaze();
         }
-        Debug.Log("lost the detected object");
     }
 
+    public void GrabObject(GrabbableObject obj){
+        _grabbedObject = obj;
+    }
+    public void DropObject(){
+        _grabbedObject = null;
+    }
     private void OnDestroy()
     {
         playerCamera.OnNewObjectDetected -= HandleNewObjectDetected;

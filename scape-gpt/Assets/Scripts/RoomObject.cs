@@ -4,10 +4,12 @@ using TMPro;
 
 public abstract class RoomObject: MonoBehaviour
 {
+    protected bool hasBeenSeen;
     private PlayerController player;
 
-    void Start(){
-        player = GetComponent<PlayerController>();
+    protected virtual void Start(){
+        player = FindObjectOfType<PlayerController>();
+        hasBeenSeen = false;
     }
 
     public void OnPointerEnterXR(){

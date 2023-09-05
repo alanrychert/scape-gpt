@@ -11,7 +11,8 @@ using TMPro;
 public class ChatGPT : MonoBehaviour
 {
     public SpeechTextManager speechTextManager;
-    [SerializeField] private TextMeshProUGUI uIText;
+    [SerializeField] PlayerController player;
+    //[SerializeField] private TextMeshProUGUI uIText;
 
     // Replace with your own OpenAI API key
     // vieja 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
@@ -26,6 +27,11 @@ public class ChatGPT : MonoBehaviour
 
     private RequestBodyChatGPT requestBodyChatGPT;
     private ResponseBodyChatGPT responseBodyChatGPT;
+    private string promptHeader = "En este momento vas a actuar como si fueras el dueño de una sala de escape, que da pistas de no más de 10 palabras. Para responder a esta consulta solo podes tener en cuenta la informacion que te daré a continuacion:"
+
+    void Start(){
+        speechTextManager.StartSpeaking("bienvenido a la sala de escape");
+    }
 
     // Send a request to the OpenAI GPT-3 API and return the response as a string
     private IEnumerator SendRequest(string input, System.Action<string> onComplete)
@@ -34,7 +40,7 @@ public class ChatGPT : MonoBehaviour
         // Set up the request body
         requestBodyChatGPT = new RequestBodyChatGPT();
         requestBodyChatGPT.model = "text-davinci-003";
-        requestBodyChatGPT.prompt = input;
+        requestBodyChatGPT.prompt = input + "En la habitación se encuentran los siguientes objetos:" + player.roomInformation;
         requestBodyChatGPT.max_tokens = maxResponseLength;
         requestBodyChatGPT.temperature = 0;
 
@@ -69,13 +75,13 @@ public class ChatGPT : MonoBehaviour
     
     public void MakeRequest(string input)
     {
-        var inputAskingSpanishResponse = input + ". Contestame en espaniol por favor.";
+        var inputAskingSpanishResponse = input + ", y contestame en espaniol por favor.";
         Debug.Log("Hola voy a llamar a chatgpt");
         StartCoroutine(SendRequest(inputAskingSpanishResponse, (response) =>
         {
             speechTextManager.StartSpeaking(response);
             Debug.Log("Hola ya llamé a chatgpt");
-            uIText.text = "response";
+//            uIText.text = "response";
             //<uses-permission android:name="android.permission.INTERNET" />
         }));
     }

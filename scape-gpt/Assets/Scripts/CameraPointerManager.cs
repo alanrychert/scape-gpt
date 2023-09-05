@@ -15,12 +15,6 @@ public class CameraPointerManager : MonoBehaviour
     [SerializeField] private float distancePointerObject = 0.95f;
 
     private const float _maxDistance = 10;
-
-
-    private GameObject PlayerHand; 
-    private GameObject _gazedAtObject = null;
-
-    private readonly string interactableTag = "Interactable";
     private float scaleSize = 0.025f;
     [HideInInspector]
     public Vector3 hitPoint;
@@ -37,11 +31,6 @@ public class CameraPointerManager : MonoBehaviour
         pointer.transform.localScale = Vector3.one * 0.1f;
         pointer.transform.localPosition = new Vector3(0,0,maxDistancePointer);
     }
-
-    private void Start(){
-        PlayerHand = this.transform.GetChild(0).gameObject;
-    }
-
 
     /// <summary>
     /// Update is called once per frame.

@@ -11,7 +11,7 @@ using System;
 public class SpeechTextManager : MonoBehaviour
 {
     [SerializeField] private string language = "es-ES";
-    [SerializeField] private TextMeshProUGUI uIText;
+    //[SerializeField] private TextMeshProUGUI uIText;
 
     // [Serializable]
     // public struct VoiceCommand
@@ -92,13 +92,13 @@ public class SpeechTextManager : MonoBehaviour
     public void StartSpeaking (string message)
     {
         TextToSpeech.Instance.StartSpeak(message);
-        uIText.text = "Teoricamente hablando";
+        //uIText.text = "Teoricamente hablando";
     }
 
     public void StopSpeaking()
     {
         TextToSpeech.Instance.StopSpeak();
-        uIText.text = "Teoricamente para de hablar";
+        //uIText.text = "Teoricamente para de hablar";
     }
 
     public void OnSpeakStart()
