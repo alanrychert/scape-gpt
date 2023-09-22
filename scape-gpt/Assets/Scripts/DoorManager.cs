@@ -10,10 +10,7 @@ public class DoorManager : RoomObject
         base.Start();
         opened=false;
     }
-    public override string getDescription(){
-        hasBeenSeen = true;
-        return "Puerta de madera medieval";
-    }
+    
     private void OnTriggerEnter(Collider other){
         if (other.gameObject.CompareTag(keyTag) && !opened){
             Debug.Log("la llave está en la puerta");

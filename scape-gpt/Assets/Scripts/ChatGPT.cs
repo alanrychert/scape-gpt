@@ -30,15 +30,11 @@ public class ChatGPT : MonoBehaviour
     private string promptHeader = "En este momento vas a actuar como si fueras el dueño de una sala de escape, que da pistas de no más de 10 palabras. Para responder a esta consulta solo podes tener en cuenta la informacion que te daré a continuacion:";
 
     // Send a request to the OpenAI GPT-3 API and return the response as a string
-    private IEnumerator SendRequest(string input, System.Action<string> onComplete)
+    private IEnumerator SendRequest(List<Message> messages, System.Action<string> onComplete)
     {
-
-        // Set up the request body
         requestBodyChatGPT = new RequestBodyChatGPT();
         requestBodyChatGPT.model = "text-davinci-003";
-        requestBodyChatGPT.prompt = promptHeader + "En la habitación se encuentran los siguientes objetos:" + player.roomInformation + "la pregunta es:" + input;
-        requestBodyChatGPT.max_tokens = maxResponseLength;
-        requestBodyChatGPT.temperature = 0;
+        requestBodyChatGPT.messages = messages;
 
         string JsonData = JsonUtility.ToJson(requestBodyChatGPT);
 
@@ -47,9 +43,6 @@ public class ChatGPT : MonoBehaviour
 
         requestChatGPT.uploadHandler = new UploadHandlerRaw(rawData);
         requestChatGPT.downloadHandler = new DownloadHandlerBuffer();
-
-        //-H "Content-Type: application/json" \
-        //-H "Authorization: Bearer $OPENAI_API_KEY" \
 
         requestChatGPT.SetRequestHeader("Content-Type", "application/json");
         requestChatGPT.SetRequestHeader("Authorization", "Bearer " + apiKey);
@@ -65,58 +58,63 @@ public class ChatGPT : MonoBehaviour
         {
             Debug.LogError("Error sending request to ChatGPT API: " + requestChatGPT.result);
         }
-    
+        
         requestChatGPT.Dispose();
     }
-    
+
     public void MakeRequest(string input)
     {
         var inputAskingSpanishResponse = input + ", y contestame en espaniol por favor.";
-        Debug.Log("Hola voy a llamar a chatgpt");
-        StartCoroutine(SendRequest(inputAskingSpanishResponse, (response) =>
+        
+        List<Message> messages = new List<Message>();
+        
+        Message systemMessage = new Message();
+        systemMessage.role = "system";
+        systemMessage.content = promptHeader + "En la habitación se encuentran los siguientes objetos:" + player.roomInformation;
+        
+        Message userMessage = new Message();
+        userMessage.role = "user";
+        userMessage.content = inputAskingSpanishResponse;
+
+        messages.Add(systemMessage);
+        messages.Add(userMessage);
+
+        StartCoroutine(SendRequest(messages, (response) =>
         {
             speechTextManager.StartSpeaking(response);
             Debug.Log("Hola ya llamé a chatgpt");
-//            uIText.text = "response";
+    //        uIText.text = "response";
             //<uses-permission android:name="android.permission.INTERNET" />
         }));
     }
-}
 
-[Serializable]
-public class RequestBodyChatGPT
-{
-    public string model;
-    public string prompt;
-    public int max_tokens;
-    public int temperature;
-}
+    [Serializable]
+    public class RequestBodyChatGPT
+    {
+        public string model;
+        public List<Message> messages;
+    }
 
-// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
-[Serializable]
-public class ResponseBodyChatGPT
-{
-    public string id ;
-    public string @object ;
-    public int created ;
-    public string model ;
-    public List<Choice> choices ;
-    public Usage usage ;
+    [Serializable]
+    public class Message
+    {
+        public string role;
+        public string content;
+    }
+
+    [Serializable]
+    public class ResponseBodyChatGPT
+    {
+        public string id ;
+        public string @object ;
+        public int created ;
+        public string model ;
+        public List<Choice> choices ;
+    }
 
     [Serializable]
     public class Choice
     {
         public string text ;
-        public int index ;
-        public object logprobs ;
-        public string finish_reason ;
-    }
-
-    [Serializable]
-    public class Usage
-    {
-        public int prompt_tokens ;
-        public int completion_tokens ;
-        public int total_tokens ;
     }
 }

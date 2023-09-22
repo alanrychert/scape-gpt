@@ -8,12 +8,8 @@ public class UIElementXR : MonoBehaviour
 {
     public UnityEvent onXRPointerEnter;
     public UnityEvent onXRPointerExit;
-    private Camera XRCamera;
-    // Start is called before the first frame update
-    void Start()
-    {
-        XRCamera = CameraPointerManager.Instance.gameObject.GetComponent<Camera>();
-            }
+    [SerializeField] public Camera XRCamera;
+    [SerializeField] public ObjectDetector objectDetector;
 
     // Update is called once per frame
     public void OnPointerClickXR(){
@@ -36,7 +32,7 @@ public class UIElementXR : MonoBehaviour
     }
 
     private PointerEventData PlacePointer(){
-        Vector3 screenPos = XRCamera.WorldToScreenPoint(CameraPointerManager.Instance.hitPoint);
+        Vector3 screenPos = XRCamera.WorldToScreenPoint(objectDetector.hitPoint);
         var pointer = new PointerEventData(EventSystem.current);
         pointer.position = new Vector2(screenPos.x, screenPos.y);
         return pointer;
