@@ -2145,14 +2145,14 @@ extern void CardboardSimulator_Start_m59E87C36C597BA224762458482EBA9E0980B900B (
 extern void CardboardSimulator_Update_mBC76CD75232FB6BE70F92EA93FED3F28138A6D85 (void);
 // 0x00000489 System.Void CardboardSimulator::.ctor()
 extern void CardboardSimulator__ctor_mB010568C122188A4869F5AC98CA710622C6AA473 (void);
-// 0x0000048A System.Collections.IEnumerator ChatGPT::SendRequest(System.Collections.Generic.List`1<ChatGPT/Message>,System.Action`1<System.String>)
-extern void ChatGPT_SendRequest_m94C797D4856F5D09778929975FE3A6EF9B5C6C05 (void);
+// 0x0000048A System.Collections.IEnumerator ChatGPT::SendRequest(System.String,System.Action`1<System.String>)
+extern void ChatGPT_SendRequest_m9B101ADC11F80D7938812BC4BB41C64F2D47F4E9 (void);
 // 0x0000048B System.Void ChatGPT::MakeRequest(System.String)
 extern void ChatGPT_MakeRequest_m56BBD38686E22A1640D3D7F3F372C8CDD7873CE7 (void);
 // 0x0000048C System.Void ChatGPT::.ctor()
 extern void ChatGPT__ctor_m6E8C531F3C60F434D49C2F872B31C9DD9FE25598 (void);
-// 0x0000048D System.Void ChatGPT::<MakeRequest>b__9_0(System.String)
-extern void ChatGPT_U3CMakeRequestU3Eb__9_0_mD1548D17664E0EEDE13E0578BEC48BA6365BCD30 (void);
+// 0x0000048D System.Void ChatGPT::<MakeRequest>b__8_0(System.String)
+extern void ChatGPT_U3CMakeRequestU3Eb__8_0_m20F2AD20A2CB7067CB58DFB4000EEF0E5A776750 (void);
 // 0x0000048E System.Void ChatGPT/RequestBodyChatGPT::.ctor()
 extern void RequestBodyChatGPT__ctor_m92409E86F256937A9C683CD262B062BD7AECF62E (void);
 // 0x0000048F System.Void ChatGPT/Message::.ctor()
@@ -2161,18 +2161,18 @@ extern void Message__ctor_m1568614CBE96F0C7721037E2F86B8D5A7E457604 (void);
 extern void ResponseBodyChatGPT__ctor_mD0EEE9437096E3AD77B1DA0AD13789A7F4484B4F (void);
 // 0x00000491 System.Void ChatGPT/Choice::.ctor()
 extern void Choice__ctor_m0C4AA03075A48BF15F737DE24A621C919CA93157 (void);
-// 0x00000492 System.Void ChatGPT/<SendRequest>d__8::.ctor(System.Int32)
-extern void U3CSendRequestU3Ed__8__ctor_mFD911DE908A3F16C5E7B32EA03C2E18BD2399D09 (void);
-// 0x00000493 System.Void ChatGPT/<SendRequest>d__8::System.IDisposable.Dispose()
-extern void U3CSendRequestU3Ed__8_System_IDisposable_Dispose_m5B4102EE802DE8178DE2E9CA8F95D975237591D5 (void);
-// 0x00000494 System.Boolean ChatGPT/<SendRequest>d__8::MoveNext()
-extern void U3CSendRequestU3Ed__8_MoveNext_mFEF4FF65A5523ED4C382629C5031DBE2CB03D208 (void);
-// 0x00000495 System.Object ChatGPT/<SendRequest>d__8::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CSendRequestU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6C0373C6F02E6C450B313A73415DFBCEA32A9BD4 (void);
-// 0x00000496 System.Void ChatGPT/<SendRequest>d__8::System.Collections.IEnumerator.Reset()
-extern void U3CSendRequestU3Ed__8_System_Collections_IEnumerator_Reset_m246E660E2238B73D0918609C622FA53796456D2E (void);
-// 0x00000497 System.Object ChatGPT/<SendRequest>d__8::System.Collections.IEnumerator.get_Current()
-extern void U3CSendRequestU3Ed__8_System_Collections_IEnumerator_get_Current_m38BAEFABC30EB591A982C40459EF11200BF41028 (void);
+// 0x00000492 System.Void ChatGPT/<SendRequest>d__7::.ctor(System.Int32)
+extern void U3CSendRequestU3Ed__7__ctor_mF0AD24514306C5786545AAB55726A338B776F792 (void);
+// 0x00000493 System.Void ChatGPT/<SendRequest>d__7::System.IDisposable.Dispose()
+extern void U3CSendRequestU3Ed__7_System_IDisposable_Dispose_m420A2734C44A53E9A8F3B458ED08010DAC4E8B17 (void);
+// 0x00000494 System.Boolean ChatGPT/<SendRequest>d__7::MoveNext()
+extern void U3CSendRequestU3Ed__7_MoveNext_mBF0765E7046B7040D7313AE236221DF8AEE52CE4 (void);
+// 0x00000495 System.Object ChatGPT/<SendRequest>d__7::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CSendRequestU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m007704F797F6B86508392480A735EA0E4C262C92 (void);
+// 0x00000496 System.Void ChatGPT/<SendRequest>d__7::System.Collections.IEnumerator.Reset()
+extern void U3CSendRequestU3Ed__7_System_Collections_IEnumerator_Reset_mD4A39663428AFE079B77058BD7B5AC9346EB48BC (void);
+// 0x00000497 System.Object ChatGPT/<SendRequest>d__7::System.Collections.IEnumerator.get_Current()
+extern void U3CSendRequestU3Ed__7_System_Collections_IEnumerator_get_Current_m94135CB562CC917A44E738FA06176A5009FDC8C2 (void);
 // 0x00000498 System.Void ClickableObject::Visited()
 extern void ClickableObject_Visited_m28AFC9296723F60DE11A4E3CBD27779709E600D7 (void);
 // 0x00000499 System.Void ClickableObject::.ctor()
@@ -2274,10 +2274,10 @@ extern void ObjectDetector_Awake_mB0CB3C0601CB677F9C32783371A0F3DBB6BF868D (void
 extern void ObjectDetector_Detect_mFC588690DAC031EBE84873794783C0C15468FEFB (void);
 // 0x000004CC System.Void ObjectDetector::PointerOnGaze(UnityEngine.Vector3)
 extern void ObjectDetector_PointerOnGaze_m8946865B65B292DFECD916EE3A189D0C38716BF9 (void);
-// 0x000004CD System.Void ObjectDetector::pointerOutGaze()
-extern void ObjectDetector_pointerOutGaze_m5C1342BAC0F0EAFF03F3232E3C8D4107722BA0AA (void);
-// 0x000004CE UnityEngine.Vector3 ObjectDetector::CalculatePointerPosition(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)
+// 0x000004CD UnityEngine.Vector3 ObjectDetector::CalculatePointerPosition(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)
 extern void ObjectDetector_CalculatePointerPosition_m1CBB3813B12F902478FCFDEFD8180E557BE130FD (void);
+// 0x000004CE System.Void ObjectDetector::pointerOutGaze()
+extern void ObjectDetector_pointerOutGaze_m5C1342BAC0F0EAFF03F3232E3C8D4107722BA0AA (void);
 // 0x000004CF System.Void ObjectDetector::.ctor()
 extern void ObjectDetector__ctor_m6BF2B0E0BB79615E7651FD6A159BFF6C2A2FADA6 (void);
 // 0x000004D0 System.Void ObjectReaction::Start()
@@ -3709,20 +3709,20 @@ static Il2CppMethodPointer s_methodPointers[1364] =
 	CardboardSimulator_Start_m59E87C36C597BA224762458482EBA9E0980B900B,
 	CardboardSimulator_Update_mBC76CD75232FB6BE70F92EA93FED3F28138A6D85,
 	CardboardSimulator__ctor_mB010568C122188A4869F5AC98CA710622C6AA473,
-	ChatGPT_SendRequest_m94C797D4856F5D09778929975FE3A6EF9B5C6C05,
+	ChatGPT_SendRequest_m9B101ADC11F80D7938812BC4BB41C64F2D47F4E9,
 	ChatGPT_MakeRequest_m56BBD38686E22A1640D3D7F3F372C8CDD7873CE7,
 	ChatGPT__ctor_m6E8C531F3C60F434D49C2F872B31C9DD9FE25598,
-	ChatGPT_U3CMakeRequestU3Eb__9_0_mD1548D17664E0EEDE13E0578BEC48BA6365BCD30,
+	ChatGPT_U3CMakeRequestU3Eb__8_0_m20F2AD20A2CB7067CB58DFB4000EEF0E5A776750,
 	RequestBodyChatGPT__ctor_m92409E86F256937A9C683CD262B062BD7AECF62E,
 	Message__ctor_m1568614CBE96F0C7721037E2F86B8D5A7E457604,
 	ResponseBodyChatGPT__ctor_mD0EEE9437096E3AD77B1DA0AD13789A7F4484B4F,
 	Choice__ctor_m0C4AA03075A48BF15F737DE24A621C919CA93157,
-	U3CSendRequestU3Ed__8__ctor_mFD911DE908A3F16C5E7B32EA03C2E18BD2399D09,
-	U3CSendRequestU3Ed__8_System_IDisposable_Dispose_m5B4102EE802DE8178DE2E9CA8F95D975237591D5,
-	U3CSendRequestU3Ed__8_MoveNext_mFEF4FF65A5523ED4C382629C5031DBE2CB03D208,
-	U3CSendRequestU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6C0373C6F02E6C450B313A73415DFBCEA32A9BD4,
-	U3CSendRequestU3Ed__8_System_Collections_IEnumerator_Reset_m246E660E2238B73D0918609C622FA53796456D2E,
-	U3CSendRequestU3Ed__8_System_Collections_IEnumerator_get_Current_m38BAEFABC30EB591A982C40459EF11200BF41028,
+	U3CSendRequestU3Ed__7__ctor_mF0AD24514306C5786545AAB55726A338B776F792,
+	U3CSendRequestU3Ed__7_System_IDisposable_Dispose_m420A2734C44A53E9A8F3B458ED08010DAC4E8B17,
+	U3CSendRequestU3Ed__7_MoveNext_mBF0765E7046B7040D7313AE236221DF8AEE52CE4,
+	U3CSendRequestU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m007704F797F6B86508392480A735EA0E4C262C92,
+	U3CSendRequestU3Ed__7_System_Collections_IEnumerator_Reset_mD4A39663428AFE079B77058BD7B5AC9346EB48BC,
+	U3CSendRequestU3Ed__7_System_Collections_IEnumerator_get_Current_m94135CB562CC917A44E738FA06176A5009FDC8C2,
 	ClickableObject_Visited_m28AFC9296723F60DE11A4E3CBD27779709E600D7,
 	ClickableObject__ctor_m1CF2199F7297C91DABC166BFBE66DA0B08AEEE2C,
 	CommandInvoker_AddCommand_mA9B27A9EEA4EDE6F4B750702594E07EEF0DC69E8,
@@ -3776,8 +3776,8 @@ static Il2CppMethodPointer s_methodPointers[1364] =
 	ObjectDetector_Awake_mB0CB3C0601CB677F9C32783371A0F3DBB6BF868D,
 	ObjectDetector_Detect_mFC588690DAC031EBE84873794783C0C15468FEFB,
 	ObjectDetector_PointerOnGaze_m8946865B65B292DFECD916EE3A189D0C38716BF9,
-	ObjectDetector_pointerOutGaze_m5C1342BAC0F0EAFF03F3232E3C8D4107722BA0AA,
 	ObjectDetector_CalculatePointerPosition_m1CBB3813B12F902478FCFDEFD8180E557BE130FD,
+	ObjectDetector_pointerOutGaze_m5C1342BAC0F0EAFF03F3232E3C8D4107722BA0AA,
 	ObjectDetector__ctor_m6BF2B0E0BB79615E7651FD6A159BFF6C2A2FADA6,
 	ObjectReaction_Start_mBE76FEAEAF87D05F4DE697266F6CF0A17EF91E9F,
 	ObjectReaction_OnPointerEnterXR_mBB8C7A9FB7C632746CE4C391E59ECC0C9CC2D629,
@@ -5143,8 +5143,8 @@ static const int32_t s_InvokerIndices[1364] =
 	4567,
 	4465,
 	3716,
-	4567,
 	901,
+	4567,
 	4567,
 	4567,
 	4567,

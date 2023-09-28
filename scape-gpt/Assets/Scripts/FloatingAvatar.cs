@@ -23,10 +23,11 @@ public class FloatingAvatar : RoomObject
         isListening = false;
     }
 
-    public override void Visited(){
-        if (isListening){
+    public override void Accept(IVisitor V){
+        if (!isListening){
             speechTextManager.StartListening();
             avatarLight.range=lightRangeWhenListening;
+            Debug.Log("pelo");
         }
         else{
             speechTextManager.StopListening();

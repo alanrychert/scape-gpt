@@ -8,7 +8,11 @@ public class KeyboardObject : RoomObject
     protected override void Start(){
         base.Start();
     }
-    public override void Visited(){
+
+    public override void Accept(IVisitor v){
+        v.VisitKeyboardObject(this);
+    }
+    public void Write(){
         digitalLock.Write(key);
     }
     public string GetKey(){

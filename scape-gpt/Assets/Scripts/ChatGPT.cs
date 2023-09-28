@@ -22,19 +22,18 @@ public class ChatGPT : MonoBehaviour
     // The endpoint for the OpenAI GPT-3 API
     private string endpoint = "https://api.openai.com/v1/completions";
 
-    // The maximum length of the response from the API
-    private int maxResponseLength = 256;
-
     private RequestBodyChatGPT requestBodyChatGPT;
     private ResponseBodyChatGPT responseBodyChatGPT;
-    private string promptHeader = "En este momento vas a actuar como si fueras el dueño de una sala de escape, que da pistas de no más de 10 palabras. Para responder a esta consulta solo podes tener en cuenta la informacion que te daré a continuacion:";
+    private string promptHeader = "En este momento vas a actuar como si fueras el dueño de una sala de escape, que da pistas de no más de 30 palabras. Para responder a esta consulta solo podes tener en cuenta la informacion que te daré a continuacion:";
 
     // Send a request to the OpenAI GPT-3 API and return the response as a string
-    private IEnumerator SendRequest(List<Message> messages, System.Action<string> onComplete)
+    private IEnumerator SendRequest(string input, System.Action<string> onComplete)
     {
         requestBodyChatGPT = new RequestBodyChatGPT();
-        requestBodyChatGPT.model = "text-davinci-003";
-        requestBodyChatGPT.messages = messages;
+        requestBodyChatGPT.model = "gpt-3.5-turbo-instruct";
+        requestBodyChatGPT.prompt = input;
+        requestBodyChatGPT.max_tokens = 1024;
+        requestBodyChatGPT.temperature = 0.3f;
 
         string JsonData = JsonUtility.ToJson(requestBodyChatGPT);
 
@@ -64,26 +63,15 @@ public class ChatGPT : MonoBehaviour
 
     public void MakeRequest(string input)
     {
+        
         var inputAskingSpanishResponse = input + ", y contestame en espaniol por favor.";
-        
-        List<Message> messages = new List<Message>();
-        
-        Message systemMessage = new Message();
-        systemMessage.role = "system";
-        systemMessage.content = promptHeader + "En la habitación se encuentran los siguientes objetos:" + player.roomInformation;
-        
-        Message userMessage = new Message();
-        userMessage.role = "user";
-        userMessage.content = inputAskingSpanishResponse;
+        string requestInput = promptHeader + "En la habitación se encuentran los siguientes objetos:" + player.roomInformation + inputAskingSpanishResponse;
 
-        messages.Add(systemMessage);
-        messages.Add(userMessage);
-
-        StartCoroutine(SendRequest(messages, (response) =>
+        StartCoroutine(SendRequest(requestInput, (response) =>
         {
             speechTextManager.StartSpeaking(response);
             Debug.Log("Hola ya llamé a chatgpt");
-    //        uIText.text = "response";
+            //        uIText.text = "response";
             //<uses-permission android:name="android.permission.INTERNET" />
         }));
     }
@@ -92,7 +80,9 @@ public class ChatGPT : MonoBehaviour
     public class RequestBodyChatGPT
     {
         public string model;
-        public List<Message> messages;
+        public string prompt;
+        public int max_tokens;
+        public float temperature;
     }
 
     [Serializable]
@@ -115,6 +105,9 @@ public class ChatGPT : MonoBehaviour
     [Serializable]
     public class Choice
     {
-        public string text ;
+        public object logprobs;
+        public int index;
+        public string finish_reason;
+        public string text;
     }
 }

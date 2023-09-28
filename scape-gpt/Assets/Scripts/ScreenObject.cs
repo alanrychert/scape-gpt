@@ -14,7 +14,7 @@ public class ScreenObject : RoomObject
     protected override void Start(){
         base.Start();
     }
-    public override void Visited(){
+    public override void Accept(IVisitor v){
         //try to unlock
     }
     public void Write(string key){

@@ -6,10 +6,14 @@ public class RoomObject: MonoBehaviour
 {
     protected bool hasBeenSeen;
     [SerializeField] private string description;
-    [SerializeField]
-    private ICommand command;
+    protected Renderer objectRenderer;
     protected virtual void Start(){
         hasBeenSeen = false;
+        objectRenderer = GetComponent<Renderer>();
+    }
+
+    public virtual void Accept(IVisitor v){
+        v.VisitRoomObject(this);
     }
 
     public string See(){
@@ -22,7 +26,13 @@ public class RoomObject: MonoBehaviour
         return result;
     }
 
-    public virtual void Visited(){
-        //command.Execute();
+    public virtual void TryOpen(GrabbableObject grabbable)
+    {
+        grabbable.FallToTheFloor();
+    }
+
+    public void SetVisibility(bool isVisible)
+    {
+        objectRenderer.enabled = isVisible;
     }
 }

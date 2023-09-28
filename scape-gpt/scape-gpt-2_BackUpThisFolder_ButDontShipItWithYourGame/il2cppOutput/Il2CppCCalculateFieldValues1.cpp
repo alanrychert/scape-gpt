@@ -342,8 +342,6 @@ struct List_1_t84B666107A8A3ECB0F5A24B0243137D056DA9165;
 struct List_1_tB663AF9B0DBD0D685E595C4B50CF1535137C768A;
 // System.Collections.Generic.List`1<ChatGPT/Choice>
 struct List_1_tFD0A61DF273563B905BBC2F10603EBA4CE6731BB;
-// System.Collections.Generic.List`1<ChatGPT/Message>
-struct List_1_t3A963AD0737297B028DFF0973A96987159A65661;
 // System.Collections.Generic.List`1<UnityEngine.UI.Dropdown/DropdownItem>
 struct List_1_t89B39292AD45371F7FDCB295AAE956D33588BC6E;
 // System.Collections.Generic.List`1<UnityEngine.UI.Dropdown/OptionData>
@@ -2357,34 +2355,40 @@ struct U3COnFinishSubmitU3Ed__9_t55620C8613B09E9D27E197A064B9C249B6F13164  : pub
 	float ___U3CelapsedTimeU3E5__2_4;
 };
 
-// ChatGPT/<SendRequest>d__8
-struct U3CSendRequestU3Ed__8_tD8CA77A509DEEA1440A88D55D694C9A13D3D0BC5  : public RuntimeObject
+// ChatGPT/<SendRequest>d__7
+struct U3CSendRequestU3Ed__7_t2C26FE502E0BD51B867AB48448ADDDC8A71601B5  : public RuntimeObject
 {
-	// System.Int32 ChatGPT/<SendRequest>d__8::<>1__state
+	// System.Int32 ChatGPT/<SendRequest>d__7::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object ChatGPT/<SendRequest>d__8::<>2__current
+	// System.Object ChatGPT/<SendRequest>d__7::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// System.Collections.Generic.List`1<ChatGPT/Message> ChatGPT/<SendRequest>d__8::messages
-	List_1_t3A963AD0737297B028DFF0973A96987159A65661* ___messages_2;
-	// System.Action`1<System.String> ChatGPT/<SendRequest>d__8::onComplete
+	// System.String ChatGPT/<SendRequest>d__7::input
+	String_t* ___input_2;
+	// System.Action`1<System.String> ChatGPT/<SendRequest>d__7::onComplete
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___onComplete_3;
-	// ChatGPT ChatGPT/<SendRequest>d__8::<>4__this
+	// ChatGPT ChatGPT/<SendRequest>d__7::<>4__this
 	ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C* ___U3CU3E4__this_4;
-	// System.String ChatGPT/<SendRequest>d__8::<JsonData>5__1
+	// System.String ChatGPT/<SendRequest>d__7::<JsonData>5__1
 	String_t* ___U3CJsonDataU3E5__1_5;
-	// System.Byte[] ChatGPT/<SendRequest>d__8::<rawData>5__2
+	// System.Byte[] ChatGPT/<SendRequest>d__7::<rawData>5__2
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___U3CrawDataU3E5__2_6;
-	// UnityEngine.Networking.UnityWebRequest ChatGPT/<SendRequest>d__8::<requestChatGPT>5__3
+	// UnityEngine.Networking.UnityWebRequest ChatGPT/<SendRequest>d__7::<requestChatGPT>5__3
 	UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* ___U3CrequestChatGPTU3E5__3_7;
-	// System.String ChatGPT/<SendRequest>d__8::<result>5__4
+	// System.String ChatGPT/<SendRequest>d__7::<result>5__4
 	String_t* ___U3CresultU3E5__4_8;
 };
 
 // ChatGPT/Choice
 struct Choice_tAB207E881C715694519D269A12832AC8D86EA230  : public RuntimeObject
 {
+	// System.Object ChatGPT/Choice::logprobs
+	RuntimeObject* ___logprobs_0;
+	// System.Int32 ChatGPT/Choice::index
+	int32_t ___index_1;
+	// System.String ChatGPT/Choice::finish_reason
+	String_t* ___finish_reason_2;
 	// System.String ChatGPT/Choice::text
-	String_t* ___text_0;
+	String_t* ___text_3;
 };
 
 // ChatGPT/Message
@@ -2401,8 +2405,12 @@ struct RequestBodyChatGPT_tD2267EB810CD63797233AD206ED3D39D815A2DDF  : public Ru
 {
 	// System.String ChatGPT/RequestBodyChatGPT::model
 	String_t* ___model_0;
-	// System.Collections.Generic.List`1<ChatGPT/Message> ChatGPT/RequestBodyChatGPT::messages
-	List_1_t3A963AD0737297B028DFF0973A96987159A65661* ___messages_1;
+	// System.String ChatGPT/RequestBodyChatGPT::prompt
+	String_t* ___prompt_1;
+	// System.Int32 ChatGPT/RequestBodyChatGPT::max_tokens
+	int32_t ___max_tokens_2;
+	// System.Single ChatGPT/RequestBodyChatGPT::temperature
+	float ___temperature_3;
 };
 
 // ChatGPT/ResponseBodyChatGPT
@@ -11426,14 +11434,12 @@ struct ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C  : public MonoBehaviour
 	String_t* ___apiKey_6;
 	// System.String ChatGPT::endpoint
 	String_t* ___endpoint_7;
-	// System.Int32 ChatGPT::maxResponseLength
-	int32_t ___maxResponseLength_8;
 	// ChatGPT/RequestBodyChatGPT ChatGPT::requestBodyChatGPT
-	RequestBodyChatGPT_tD2267EB810CD63797233AD206ED3D39D815A2DDF* ___requestBodyChatGPT_9;
+	RequestBodyChatGPT_tD2267EB810CD63797233AD206ED3D39D815A2DDF* ___requestBodyChatGPT_8;
 	// ChatGPT/ResponseBodyChatGPT ChatGPT::responseBodyChatGPT
-	ResponseBodyChatGPT_t44AE8BDB4CFF4E807F16614946AA8E437C06B7FC* ___responseBodyChatGPT_10;
+	ResponseBodyChatGPT_t44AE8BDB4CFF4E807F16614946AA8E437C06B7FC* ___responseBodyChatGPT_9;
 	// System.String ChatGPT::promptHeader
-	String_t* ___promptHeader_11;
+	String_t* ___promptHeader_10;
 };
 
 // CommandInvoker
@@ -11610,24 +11616,22 @@ struct PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95  : public Mono
 	float ___Speed_4;
 	// System.Single PlayerController::Gravity
 	float ___Gravity_5;
-	// System.String PlayerController::eol
-	String_t* ___eol_6;
 	// System.Boolean PlayerController::hasGrabbedSomething
-	bool ___hasGrabbedSomething_7;
+	bool ___hasGrabbedSomething_6;
 	// RoomObject PlayerController::_gazedObject
-	RoomObject_t616CA975E5B00921FDCD8CDEBB806C8F9CDF4C05* ____gazedObject_8;
+	RoomObject_t616CA975E5B00921FDCD8CDEBB806C8F9CDF4C05* ____gazedObject_7;
 	// GrabbableObject PlayerController::_grabbedObject
-	GrabbableObject_t3394DC6437211302204BBBA31D41200C61AB70C4* ____grabbedObject_9;
+	GrabbableObject_t3394DC6437211302204BBBA31D41200C61AB70C4* ____grabbedObject_8;
 	// UnityEngine.GameObject PlayerController::playerHand
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___playerHand_10;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___playerHand_9;
 	// ObjectDetector PlayerController::playerCamera
-	ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* ___playerCamera_11;
+	ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* ___playerCamera_10;
 	// SpeechTextManager PlayerController::speechTextManager
-	SpeechTextManager_t75751AEBCFCCC754669ED7DFF1232CA8643F56A7* ___speechTextManager_12;
+	SpeechTextManager_t75751AEBCFCCC754669ED7DFF1232CA8643F56A7* ___speechTextManager_11;
 	// System.String PlayerController::<roomInformation>k__BackingField
-	String_t* ___U3CroomInformationU3Ek__BackingField_13;
+	String_t* ___U3CroomInformationU3Ek__BackingField_12;
 	// UnityEngine.CharacterController PlayerController::controller
-	CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* ___controller_14;
+	CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* ___controller_13;
 };
 
 // RoomObject
@@ -14143,9 +14147,9 @@ struct Mobile_t304A73480DF447472BDB16BA19A9E4FE2C8CB2DD_StaticFields
 
 // UnityEngine.UI.Button/<OnFinishSubmit>d__9
 
-// ChatGPT/<SendRequest>d__8
+// ChatGPT/<SendRequest>d__7
 
-// ChatGPT/<SendRequest>d__8
+// ChatGPT/<SendRequest>d__7
 
 // ChatGPT/Choice
 
@@ -19565,24 +19569,24 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3991[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3992[6] = 
 {
 	static_cast<int32_t>(offsetof(CardboardSimulator_tBBD12AE85ABBB1C59C3C4508C2F8ED5C8031DD78, ___UseCardboardSimulator_4)),static_cast<int32_t>(offsetof(CardboardSimulator_tBBD12AE85ABBB1C59C3C4508C2F8ED5C8031DD78, ___horizontalSpeed_5)),static_cast<int32_t>(offsetof(CardboardSimulator_tBBD12AE85ABBB1C59C3C4508C2F8ED5C8031DD78, ___verticalSpeed_6)),static_cast<int32_t>(offsetof(CardboardSimulator_tBBD12AE85ABBB1C59C3C4508C2F8ED5C8031DD78, ___rotationX_7)),static_cast<int32_t>(offsetof(CardboardSimulator_tBBD12AE85ABBB1C59C3C4508C2F8ED5C8031DD78, ___rotationY_8)),static_cast<int32_t>(offsetof(CardboardSimulator_tBBD12AE85ABBB1C59C3C4508C2F8ED5C8031DD78, ___cam_9)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3993[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3993[4] = 
 {
-	static_cast<int32_t>(offsetof(RequestBodyChatGPT_tD2267EB810CD63797233AD206ED3D39D815A2DDF, ___model_0)),static_cast<int32_t>(offsetof(RequestBodyChatGPT_tD2267EB810CD63797233AD206ED3D39D815A2DDF, ___messages_1)),};
+	static_cast<int32_t>(offsetof(RequestBodyChatGPT_tD2267EB810CD63797233AD206ED3D39D815A2DDF, ___model_0)),static_cast<int32_t>(offsetof(RequestBodyChatGPT_tD2267EB810CD63797233AD206ED3D39D815A2DDF, ___prompt_1)),static_cast<int32_t>(offsetof(RequestBodyChatGPT_tD2267EB810CD63797233AD206ED3D39D815A2DDF, ___max_tokens_2)),static_cast<int32_t>(offsetof(RequestBodyChatGPT_tD2267EB810CD63797233AD206ED3D39D815A2DDF, ___temperature_3)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3994[2] = 
 {
 	static_cast<int32_t>(offsetof(Message_t6AEEA544C7C781409CF075F579E6E206FD2A9F52, ___role_0)),static_cast<int32_t>(offsetof(Message_t6AEEA544C7C781409CF075F579E6E206FD2A9F52, ___content_1)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3995[5] = 
 {
 	static_cast<int32_t>(offsetof(ResponseBodyChatGPT_t44AE8BDB4CFF4E807F16614946AA8E437C06B7FC, ___id_0)),static_cast<int32_t>(offsetof(ResponseBodyChatGPT_t44AE8BDB4CFF4E807F16614946AA8E437C06B7FC, ___object_1)),static_cast<int32_t>(offsetof(ResponseBodyChatGPT_t44AE8BDB4CFF4E807F16614946AA8E437C06B7FC, ___created_2)),static_cast<int32_t>(offsetof(ResponseBodyChatGPT_t44AE8BDB4CFF4E807F16614946AA8E437C06B7FC, ___model_3)),static_cast<int32_t>(offsetof(ResponseBodyChatGPT_t44AE8BDB4CFF4E807F16614946AA8E437C06B7FC, ___choices_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3996[1] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3996[4] = 
 {
-	static_cast<int32_t>(offsetof(Choice_tAB207E881C715694519D269A12832AC8D86EA230, ___text_0)),};
+	static_cast<int32_t>(offsetof(Choice_tAB207E881C715694519D269A12832AC8D86EA230, ___logprobs_0)),static_cast<int32_t>(offsetof(Choice_tAB207E881C715694519D269A12832AC8D86EA230, ___index_1)),static_cast<int32_t>(offsetof(Choice_tAB207E881C715694519D269A12832AC8D86EA230, ___finish_reason_2)),static_cast<int32_t>(offsetof(Choice_tAB207E881C715694519D269A12832AC8D86EA230, ___text_3)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3997[9] = 
 {
-	static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__8_tD8CA77A509DEEA1440A88D55D694C9A13D3D0BC5, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__8_tD8CA77A509DEEA1440A88D55D694C9A13D3D0BC5, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__8_tD8CA77A509DEEA1440A88D55D694C9A13D3D0BC5, ___messages_2)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__8_tD8CA77A509DEEA1440A88D55D694C9A13D3D0BC5, ___onComplete_3)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__8_tD8CA77A509DEEA1440A88D55D694C9A13D3D0BC5, ___U3CU3E4__this_4)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__8_tD8CA77A509DEEA1440A88D55D694C9A13D3D0BC5, ___U3CJsonDataU3E5__1_5)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__8_tD8CA77A509DEEA1440A88D55D694C9A13D3D0BC5, ___U3CrawDataU3E5__2_6)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__8_tD8CA77A509DEEA1440A88D55D694C9A13D3D0BC5, ___U3CrequestChatGPTU3E5__3_7)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__8_tD8CA77A509DEEA1440A88D55D694C9A13D3D0BC5, ___U3CresultU3E5__4_8)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3998[8] = 
+	static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__7_t2C26FE502E0BD51B867AB48448ADDDC8A71601B5, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__7_t2C26FE502E0BD51B867AB48448ADDDC8A71601B5, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__7_t2C26FE502E0BD51B867AB48448ADDDC8A71601B5, ___input_2)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__7_t2C26FE502E0BD51B867AB48448ADDDC8A71601B5, ___onComplete_3)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__7_t2C26FE502E0BD51B867AB48448ADDDC8A71601B5, ___U3CU3E4__this_4)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__7_t2C26FE502E0BD51B867AB48448ADDDC8A71601B5, ___U3CJsonDataU3E5__1_5)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__7_t2C26FE502E0BD51B867AB48448ADDDC8A71601B5, ___U3CrawDataU3E5__2_6)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__7_t2C26FE502E0BD51B867AB48448ADDDC8A71601B5, ___U3CrequestChatGPTU3E5__3_7)),static_cast<int32_t>(offsetof(U3CSendRequestU3Ed__7_t2C26FE502E0BD51B867AB48448ADDDC8A71601B5, ___U3CresultU3E5__4_8)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3998[7] = 
 {
-	static_cast<int32_t>(offsetof(ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C, ___speechTextManager_4)),static_cast<int32_t>(offsetof(ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C, ___player_5)),static_cast<int32_t>(offsetof(ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C, ___apiKey_6)),static_cast<int32_t>(offsetof(ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C, ___endpoint_7)),static_cast<int32_t>(offsetof(ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C, ___maxResponseLength_8)),static_cast<int32_t>(offsetof(ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C, ___requestBodyChatGPT_9)),static_cast<int32_t>(offsetof(ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C, ___responseBodyChatGPT_10)),static_cast<int32_t>(offsetof(ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C, ___promptHeader_11)),};
+	static_cast<int32_t>(offsetof(ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C, ___speechTextManager_4)),static_cast<int32_t>(offsetof(ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C, ___player_5)),static_cast<int32_t>(offsetof(ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C, ___apiKey_6)),static_cast<int32_t>(offsetof(ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C, ___endpoint_7)),static_cast<int32_t>(offsetof(ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C, ___requestBodyChatGPT_8)),static_cast<int32_t>(offsetof(ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C, ___responseBodyChatGPT_9)),static_cast<int32_t>(offsetof(ChatGPT_t494860FCB187128B89CA6FA0247A4B566687A33C, ___promptHeader_10)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3999[1] = 
 {
 	static_cast<int32_t>(offsetof(ClickableObject_tBCD571480B403B90576A77ADE4842F9642DA7EEF, ___onClick_7)),};
@@ -19619,9 +19623,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4012[6] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4013[4] = 
 {
 	static_cast<int32_t>(offsetof(OpenableObject_tEAED967E7F838DF33EB7C1CD32C30E5D99EB3B8F, ___player_7)),static_cast<int32_t>(offsetof(OpenableObject_tEAED967E7F838DF33EB7C1CD32C30E5D99EB3B8F, ____animator_8)),static_cast<int32_t>(offsetof(OpenableObject_tEAED967E7F838DF33EB7C1CD32C30E5D99EB3B8F, ____collider_9)),static_cast<int32_t>(offsetof(OpenableObject_tEAED967E7F838DF33EB7C1CD32C30E5D99EB3B8F, ___open_10)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4014[11] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4014[10] = 
 {
-	static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___Speed_4)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___Gravity_5)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___eol_6)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___hasGrabbedSomething_7)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ____gazedObject_8)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ____grabbedObject_9)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___playerHand_10)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___playerCamera_11)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___speechTextManager_12)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___U3CroomInformationU3Ek__BackingField_13)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___controller_14)),};
+	static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___Speed_4)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___Gravity_5)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___hasGrabbedSomething_6)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ____gazedObject_7)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ____grabbedObject_8)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___playerHand_9)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___playerCamera_10)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___speechTextManager_11)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___U3CroomInformationU3Ek__BackingField_12)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___controller_13)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4015[2] = 
 {
 	static_cast<int32_t>(offsetof(PushableObject_t60DC92A7CF4C13E3019B3E4380EB6B9D0DAA414F, ___player_7)),static_cast<int32_t>(offsetof(PushableObject_t60DC92A7CF4C13E3019B3E4380EB6B9D0DAA414F, ___PushingVelocity_8)),};
