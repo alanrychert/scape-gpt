@@ -2,20 +2,20 @@ using UnityEngine;
 
 public class DigitalLock : RoomObject
 {
-    [SerializeField] ScreenObject screen;
-    [SerializeField] KeyboardObject unlockKey;
-    public string unlockPassword;
+    [SerializeField] private ScreenObject screen;
+    [SerializeField] private KeyboardObject unlockKey;
+    [SerializeField] private OpenableWithPassword openable;
 
     protected override void Start(){
         base.Start();
     }
     public void Write(string key){
-        if (! key.Equals(unlockKey.GetKey()))
+        if (!key.Equals(unlockKey.GetKey())){
             screen.Write(key);
-        else
-            if (screen.getText().Equals(unlockPassword))
-                Debug.Log("unlocked");
-            else
-                screen.Delete();
+        }
+        else{
+            openable.TryOpen(screen.getText());
+            screen.Delete();
+        }
     }
 }

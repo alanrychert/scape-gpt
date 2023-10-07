@@ -36,7 +36,7 @@ public class GrabbableObject : RoomObject
         // Puedes restaurar la velocidad lineal y angular del Rigidbody si es necesario
 
         // Hacer que el objeto vuelva a caer aplicando una fuerza hacia abajo
-        _rigidBody.AddForce(Vector3.forward * 0.2f, ForceMode.Impulse);
+        _rigidBody.AddForce(player.playerCamera.transform.forward*3f + Vector3.up , ForceMode.Impulse);
 
         // Deja que la gravedad haga su trabajo
         _rigidBody.useGravity = true;

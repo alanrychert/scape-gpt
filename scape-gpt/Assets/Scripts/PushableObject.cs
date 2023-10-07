@@ -3,10 +3,12 @@ using UnityEngine;
 public class PushableObject : RoomObject
 {
     [SerializeField] PlayerController player;
+    private Rigidbody _rigidBody;
     public float PushingVelocity = 4f;
 
     protected override void Start(){
         base.Start();
+        _rigidBody = GetComponent<Rigidbody>();
     }
     public override void Accept(IVisitor v){
         v.VisitPushable(this);

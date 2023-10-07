@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class ObjectDetector : MonoBehaviour
 {
-
-    [SerializeField] private GameObject pointer;
     [SerializeField] private float maxDistanceInteraction = 3f;
+    [SerializeField] private float pointerDistance;
+    [SerializeField] private GameObject pointer;
     [Range(0,1)]
 
     private const float _maxDistance = 10f;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KeyObject : GrabbableObject
 {
+    [SerializeField] private Vector3 shelfScale;
     public void Dissapear(){
         Destroy(gameObject);
     }
@@ -20,5 +21,9 @@ public class KeyObject : GrabbableObject
         }
         else
             FallToTheFloor();
+    }
+
+    public void ToShelfScale(){
+        transform.localScale = shelfScale;
     }
 }
