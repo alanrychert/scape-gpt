@@ -56,10 +56,6 @@ public class PlayerController : MonoBehaviour, IVisitor
         controller.Move(velocity * Time.deltaTime);
     }
 
-    private void GazeSelection(){
-        _gazedObject?.SendMessage("OnPointerClickXR", null, SendMessageOptions.DontRequireReceiver);
-    }
-
     public void GrabObject(GrabbableObject obj){
         _grabbedObject = obj;
     }

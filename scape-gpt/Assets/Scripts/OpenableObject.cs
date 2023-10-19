@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class OpenableObject : RoomObject
+public class OpenableObject : Interactable
 {
     [SerializeField] PlayerController player;
+    [SerializeField] protected AudioSource openedAudioSource;
     private bool open;
 
     protected override void Start(){
@@ -19,8 +20,12 @@ public class OpenableObject : RoomObject
             var _collider = GetComponent<Collider>();
             _animator.SetTrigger("Open");
             open = true;
-            Debug.Log("abriendo");
             _collider.enabled = false;
+            PlayOpenedSound();
         }
+    }
+
+    protected void PlayOpenedSound(){
+        openedAudioSource.Play();
     }
 }

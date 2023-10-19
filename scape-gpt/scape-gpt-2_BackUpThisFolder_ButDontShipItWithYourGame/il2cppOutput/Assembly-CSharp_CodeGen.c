@@ -2169,127 +2169,127 @@ extern void U3CSendRequestU3Ed__11_System_Collections_Generic_IEnumeratorU3CSyst
 extern void U3CSendRequestU3Ed__11_System_Collections_IEnumerator_Reset_m45BF300BCAAFDBACED6B53B302F44DA6CE4EE76F (void);
 // 0x00000495 System.Object ChatGPT/<SendRequest>d__11::System.Collections.IEnumerator.get_Current()
 extern void U3CSendRequestU3Ed__11_System_Collections_IEnumerator_get_Current_m5FBB0C2783B2880A0B1536F1240F6F2BA918ED3C (void);
-// 0x00000496 System.Void ClosedDoor::OpenAction()
-extern void ClosedDoor_OpenAction_m0CE7BE1726382D2218D813D47DC538B107C8A829 (void);
-// 0x00000497 System.Void ClosedDoor::.ctor()
-extern void ClosedDoor__ctor_m83FA2C1D2462041DA9108BEE6F4A04418A129DA1 (void);
-// 0x00000498 System.Void DigitalLock::Start()
+// 0x00000496 System.Void DigitalLock::Start()
 extern void DigitalLock_Start_m4D1BF7AE022BD533C445A24D2CC07FAAE158577F (void);
-// 0x00000499 System.Void DigitalLock::Write(System.String)
+// 0x00000497 System.Void DigitalLock::Write(System.String)
 extern void DigitalLock_Write_m5813324386F6E8C2E3972B097451E2D4A3EC3BA0 (void);
-// 0x0000049A System.Void DigitalLock::.ctor()
+// 0x00000498 System.Void DigitalLock::.ctor()
 extern void DigitalLock__ctor_m904D1F60E65B962DB4BD05CFFBD4C798D73BF708 (void);
-// 0x0000049B System.Void FloatingAvatar::Start()
+// 0x00000499 System.Void FloatingAvatar::Start()
 extern void FloatingAvatar_Start_mEB1FC7EA58C73EA96690814AA7748698169D6F28 (void);
-// 0x0000049C System.Void FloatingAvatar::Accept(IVisitor)
+// 0x0000049A System.Void FloatingAvatar::Accept(IVisitor)
 extern void FloatingAvatar_Accept_mD4043FFB13B1FEE49A022B2474EFFC34BBC36BA7 (void);
-// 0x0000049D System.Void FloatingAvatar::Update()
+// 0x0000049B System.Void FloatingAvatar::Update()
 extern void FloatingAvatar_Update_m7D0AE6812A0317B135A66AC42945A4C1D15AC8E8 (void);
-// 0x0000049E System.Void FloatingAvatar::.ctor()
+// 0x0000049C System.Void FloatingAvatar::.ctor()
 extern void FloatingAvatar__ctor_m109743058DCED3E7B6B4EE85A1626D25948287F1 (void);
-// 0x0000049F System.Void GazeManager::add_OnGazeSelection(System.Action)
+// 0x0000049D System.Void GazeManager::add_OnGazeSelection(System.Action)
 extern void GazeManager_add_OnGazeSelection_m4FE6E1A4B46C2F4AFB2CDFAEEF7A86E170F4BF83 (void);
-// 0x000004A0 System.Void GazeManager::remove_OnGazeSelection(System.Action)
+// 0x0000049E System.Void GazeManager::remove_OnGazeSelection(System.Action)
 extern void GazeManager_remove_OnGazeSelection_m88976A5029C54D067690761876933266756DFF4D (void);
-// 0x000004A1 System.Void GazeManager::Awake()
+// 0x0000049F System.Void GazeManager::Awake()
 extern void GazeManager_Awake_mB0ADECD4655A8D39674036BC8487F8AAB38CA15F (void);
-// 0x000004A2 System.Void GazeManager::Start()
+// 0x000004A0 System.Void GazeManager::Start()
 extern void GazeManager_Start_mBB0451FC782741DCEC60CAE87E458B11D960438D (void);
-// 0x000004A3 System.Void GazeManager::Update()
+// 0x000004A1 System.Void GazeManager::Update()
 extern void GazeManager_Update_m4D2AD8803A4C5DAA846E8F3CAF19B235BA274C23 (void);
-// 0x000004A4 System.Void GazeManager::SetUpGaze(System.Single)
+// 0x000004A2 System.Void GazeManager::SetUpGaze(System.Single)
 extern void GazeManager_SetUpGaze_m20F443A1C4F8101005C2AC8FFC583ADE44B512F0 (void);
-// 0x000004A5 System.Void GazeManager::StartGazeSelection()
+// 0x000004A3 System.Void GazeManager::StartGazeSelection()
 extern void GazeManager_StartGazeSelection_mC5D9D2AF4FCF5A41344E6F8E1F385B1AE1356AD9 (void);
-// 0x000004A6 System.Void GazeManager::CancelGazeSelection()
+// 0x000004A4 System.Void GazeManager::CancelGazeSelection()
 extern void GazeManager_CancelGazeSelection_mFF4A662611E9B9BEDA19AA9D2E32D68F9E381DE9 (void);
-// 0x000004A7 System.Void GazeManager::AddValue(System.Single)
+// 0x000004A5 System.Void GazeManager::AddValue(System.Single)
 extern void GazeManager_AddValue_mFC91A2DABBE1C117A02FE1604149F37B44BC2B03 (void);
-// 0x000004A8 System.Single GazeManager::Normalise()
+// 0x000004A6 System.Single GazeManager::Normalise()
 extern void GazeManager_Normalise_m180FBAEE68E4D5DF49914667D04318AF15ED8172 (void);
-// 0x000004A9 System.Void GazeManager::.ctor()
+// 0x000004A7 System.Void GazeManager::.ctor()
 extern void GazeManager__ctor_m303874569EB6816C0A1BD4CEFE8A27B7EB6C1BA1 (void);
-// 0x000004AA System.Void GrabbableObject::Start()
+// 0x000004A8 System.Void GrabbableObject::Start()
 extern void GrabbableObject_Start_mAFBB30A229FD0D81E1ADDB220F6011262A1717CB (void);
-// 0x000004AB System.Void GrabbableObject::Accept(IVisitor)
+// 0x000004A9 System.Void GrabbableObject::Accept(IVisitor)
 extern void GrabbableObject_Accept_m16635EB8B398AD5C6BC9AFFB0FE5A28252BDD97B (void);
-// 0x000004AC System.Void GrabbableObject::MoveToObject(UnityEngine.GameObject)
+// 0x000004AA System.Void GrabbableObject::MoveToObject(UnityEngine.GameObject)
 extern void GrabbableObject_MoveToObject_m27F4B8F40A5231265DD5A213C60515B2EA748B5E (void);
-// 0x000004AD System.Void GrabbableObject::FallToTheFloor()
+// 0x000004AB System.Void GrabbableObject::FallToTheFloor()
 extern void GrabbableObject_FallToTheFloor_m76679BD4B1ABFB2A91DC071A3D3F1CA509F20E12 (void);
-// 0x000004AE System.Boolean GrabbableObject::IsGrabbed()
+// 0x000004AC System.Boolean GrabbableObject::IsGrabbed()
 extern void GrabbableObject_IsGrabbed_m957C0315C73105BA9EB703558A6A6269F62612DB (void);
-// 0x000004AF System.Void GrabbableObject::.ctor()
+// 0x000004AD System.Void GrabbableObject::.ctor()
 extern void GrabbableObject__ctor_m59C289C77FB2DEA037E709512D379C74C47B08B0 (void);
-// 0x000004B0 System.Void Interactable::See(IVisitor)
+// 0x000004AE System.Void Interactable::See(IVisitor)
 extern void Interactable_See_mDD14DE855E5799F345E180D5EF7D0E36E595194F (void);
-// 0x000004B1 System.Void Interactable::.ctor()
+// 0x000004AF System.Void Interactable::.ctor()
 extern void Interactable__ctor_m9AA3E7B2D2090FE20FD4EDB4AE1FE9BAC5414988 (void);
-// 0x000004B2 System.Void IVisitor::VisitGrabbable(GrabbableObject)
-// 0x000004B3 System.Void IVisitor::VisitRoomObject(RoomObject)
-// 0x000004B4 System.Void IVisitor::VisitOpenable(OpenableObject)
-// 0x000004B5 System.Void IVisitor::VisitKeyboardObject(KeyboardObject)
-// 0x000004B6 System.Void IVisitor::VisitPushable(PushableObject)
-// 0x000004B7 System.Void IVisitor::VisitKeyObject(KeyObject)
-// 0x000004B8 System.Void IVisitor::VisitUnlockableInteractable(UnlockableInteractable)
-// 0x000004B9 System.Void IVisitor::SeeRoomObject(RoomObject)
-// 0x000004BA System.Void IVisitor::SeeInteractable(Interactable)
-// 0x000004BB System.Void Key::.ctor()
+// 0x000004B0 System.Void IVisitor::VisitGrabbable(GrabbableObject)
+// 0x000004B1 System.Void IVisitor::VisitRoomObject(RoomObject)
+// 0x000004B2 System.Void IVisitor::VisitOpenable(OpenableObject)
+// 0x000004B3 System.Void IVisitor::VisitKeyboardObject(KeyboardObject)
+// 0x000004B4 System.Void IVisitor::VisitPushable(PushableObject)
+// 0x000004B5 System.Void IVisitor::VisitKeyObject(KeyObject)
+// 0x000004B6 System.Void IVisitor::VisitUnlockableInteractable(UnlockableInteractable)
+// 0x000004B7 System.Void IVisitor::SeeRoomObject(RoomObject)
+// 0x000004B8 System.Void IVisitor::SeeInteractable(Interactable)
+// 0x000004B9 System.Void Key::.ctor()
 extern void Key__ctor_mA069FB77FE5BAEC833A31356AB0867315F988954 (void);
-// 0x000004BC System.Void KeyboardObject::Start()
+// 0x000004BA System.Void KeyboardObject::Start()
 extern void KeyboardObject_Start_mF7714BF215C8C7571ED047B78C16B4DB5DE18DA3 (void);
-// 0x000004BD System.Void KeyboardObject::Accept(IVisitor)
+// 0x000004BB System.Void KeyboardObject::Accept(IVisitor)
 extern void KeyboardObject_Accept_m407FE111DFE7F54286A8BDF1EBCC91AB754A8EA8 (void);
-// 0x000004BE System.Void KeyboardObject::Write()
+// 0x000004BC System.Void KeyboardObject::Write()
 extern void KeyboardObject_Write_mD72C134FBB5C2100CA21E350BA5BE24B715FF5A5 (void);
-// 0x000004BF System.String KeyboardObject::GetKey()
+// 0x000004BD System.String KeyboardObject::GetKey()
 extern void KeyboardObject_GetKey_m023F5F4304F4A7CDF95A827579AFAD6D06E69C60 (void);
-// 0x000004C0 System.Void KeyboardObject::.ctor()
+// 0x000004BE System.Void KeyboardObject::.ctor()
 extern void KeyboardObject__ctor_mBC4595DC6DFD29BFA779ABE548A19CCBC510311B (void);
-// 0x000004C1 System.Void KeyObject::MarkAsUsed()
-extern void KeyObject_MarkAsUsed_m6E264809F4361030315E5290AB2CDC7BADF96537 (void);
-// 0x000004C2 System.Void KeyObject::Accept(IVisitor)
+// 0x000004BF System.Void KeyObject::Dissapear()
+extern void KeyObject_Dissapear_m32867F1AF701E85B2CC2B140903F8F698556D5A2 (void);
+// 0x000004C0 System.Void KeyObject::Accept(IVisitor)
 extern void KeyObject_Accept_m7350438FF35576567D8E608AC0028E67CABB987C (void);
-// 0x000004C3 System.Void KeyObject::TryOpen(RoomObject)
+// 0x000004C1 System.Void KeyObject::TryOpen(RoomObject)
 extern void KeyObject_TryOpen_mEF900C4A44BA6DE4B449079DBE5E4EDDD4936CD5 (void);
-// 0x000004C4 System.Void KeyObject::.ctor()
+// 0x000004C2 System.Void KeyObject::ToShelfScale()
+extern void KeyObject_ToShelfScale_mAC0C5E27B27CB83B1472082D8FB9F1E5D141122F (void);
+// 0x000004C3 System.Void KeyObject::.ctor()
 extern void KeyObject__ctor_mD953EA234314696520C74EE29C5CAB1B5BAD939B (void);
-// 0x000004C5 UnityEngine.Vector3 ObjectDetector::get_hitPoint()
+// 0x000004C4 UnityEngine.Vector3 ObjectDetector::get_hitPoint()
 extern void ObjectDetector_get_hitPoint_mDA4B08A96C1E0C0B35F6E13501D387DEB5604689 (void);
-// 0x000004C6 System.Void ObjectDetector::set_hitPoint(UnityEngine.Vector3)
+// 0x000004C5 System.Void ObjectDetector::set_hitPoint(UnityEngine.Vector3)
 extern void ObjectDetector_set_hitPoint_mB0A42A960C1AB68B443AE7F04DD8192692A65A87 (void);
-// 0x000004C7 RoomObject ObjectDetector::Detect()
+// 0x000004C6 RoomObject ObjectDetector::Detect()
 extern void ObjectDetector_Detect_mFC588690DAC031EBE84873794783C0C15468FEFB (void);
-// 0x000004C8 System.Void ObjectDetector::ShowInteractText(System.Boolean)
+// 0x000004C7 System.Void ObjectDetector::ShowInteractText(System.Boolean)
 extern void ObjectDetector_ShowInteractText_m79DDC70B696C76FA718D777C8A19609E0556F0DF (void);
-// 0x000004C9 System.Void ObjectDetector::.ctor()
+// 0x000004C8 System.Void ObjectDetector::.ctor()
 extern void ObjectDetector__ctor_m6BF2B0E0BB79615E7651FD6A159BFF6C2A2FADA6 (void);
-// 0x000004CA System.Void ObjectReaction::Start()
+// 0x000004C9 System.Void ObjectReaction::Start()
 extern void ObjectReaction_Start_mBE76FEAEAF87D05F4DE697266F6CF0A17EF91E9F (void);
-// 0x000004CB System.Void ObjectReaction::OnPointerEnterXR()
+// 0x000004CA System.Void ObjectReaction::OnPointerEnterXR()
 extern void ObjectReaction_OnPointerEnterXR_mBB8C7A9FB7C632746CE4C391E59ECC0C9CC2D629 (void);
-// 0x000004CC System.Void ObjectReaction::OnPointerExitXR()
+// 0x000004CB System.Void ObjectReaction::OnPointerExitXR()
 extern void ObjectReaction_OnPointerExitXR_m41A1AD29ABE2AA3D66A4BD600173E358F5A31D2D (void);
-// 0x000004CD System.Void ObjectReaction::OnPointerClickXR()
+// 0x000004CC System.Void ObjectReaction::OnPointerClickXR()
 extern void ObjectReaction_OnPointerClickXR_m55B234B533BE9C3A0016EA0389B788186D9D7C51 (void);
-// 0x000004CE System.Void ObjectReaction::OnFire1PressedXR()
+// 0x000004CD System.Void ObjectReaction::OnFire1PressedXR()
 extern void ObjectReaction_OnFire1PressedXR_m94731AB3451E99917489F243A629571A3CB00359 (void);
-// 0x000004CF System.Void ObjectReaction::OnFire2PressedXR()
+// 0x000004CE System.Void ObjectReaction::OnFire2PressedXR()
 extern void ObjectReaction_OnFire2PressedXR_m5BC33411262A19DF211EA959A99954A379294EDC (void);
-// 0x000004D0 System.Void ObjectReaction::OnFire3PressedXR()
+// 0x000004CF System.Void ObjectReaction::OnFire3PressedXR()
 extern void ObjectReaction_OnFire3PressedXR_m61C160EF1ECAD5F57D73B005B26392B9840E3A06 (void);
-// 0x000004D1 System.Void ObjectReaction::OnJumpPressedXR()
+// 0x000004D0 System.Void ObjectReaction::OnJumpPressedXR()
 extern void ObjectReaction_OnJumpPressedXR_m70BEAFA38BE2D6F67D86256AF25779B57CB9D533 (void);
-// 0x000004D2 System.Void ObjectReaction::SetTransparent(System.Boolean)
+// 0x000004D1 System.Void ObjectReaction::SetTransparent(System.Boolean)
 extern void ObjectReaction_SetTransparent_m4B766576EA024B9E3038822D91B8081298E1727E (void);
-// 0x000004D3 System.Void ObjectReaction::.ctor()
+// 0x000004D2 System.Void ObjectReaction::.ctor()
 extern void ObjectReaction__ctor_m78B6DD430263EEDBC5530CD9D423E1DBFACEBECD (void);
-// 0x000004D4 System.Void OpenableObject::Start()
+// 0x000004D3 System.Void OpenableObject::Start()
 extern void OpenableObject_Start_m7172FF7735A5D1B8207597BDFD9047E3C8A3FC14 (void);
-// 0x000004D5 System.Void OpenableObject::Accept(IVisitor)
+// 0x000004D4 System.Void OpenableObject::Accept(IVisitor)
 extern void OpenableObject_Accept_m05DBBA7F0D18B98B1692649DF908F0557037CEF3 (void);
-// 0x000004D6 System.Void OpenableObject::TryOpen(GrabbableObject)
+// 0x000004D5 System.Void OpenableObject::TryOpen(GrabbableObject)
 extern void OpenableObject_TryOpen_m859DD88DABC293ACB5E50EB5DA01FCE4E850E072 (void);
+// 0x000004D6 System.Void OpenableObject::PlayOpenedSound()
+extern void OpenableObject_PlayOpenedSound_mEBABDB47678DCF7D5064FE0198522C67546BFFB3 (void);
 // 0x000004D7 System.Void OpenableObject::.ctor()
 extern void OpenableObject__ctor_m5C8F9A6F0B41CB42EBDF2344D889E124D18BBB33 (void);
 // 0x000004D8 System.Void OpenableWithPassword::Start()
@@ -2308,278 +2308,273 @@ extern void PlayerController_Start_m1D83076E8B136A71051F2F02545EE04947D3A8CF (vo
 extern void PlayerController_Update_m1F4051EB5BCBCCE5EEE2E3E49B7E278C3B14EC33 (void);
 // 0x000004DF System.Void PlayerController::PlayerMovement()
 extern void PlayerController_PlayerMovement_mEBAFA1FC1373E9645C8C699F71CA29D8A3DAE027 (void);
-// 0x000004E0 System.Void PlayerController::GazeSelection()
-extern void PlayerController_GazeSelection_mFC3424DCD4134C9C2F320DA4FBBBD7F3DA1DF124 (void);
-// 0x000004E1 System.Void PlayerController::GrabObject(GrabbableObject)
+// 0x000004E0 System.Void PlayerController::GrabObject(GrabbableObject)
 extern void PlayerController_GrabObject_mC5B3034A93E2D0AD6DFCA887ACD5471C321CAA8D (void);
-// 0x000004E2 System.Void PlayerController::DropObject()
+// 0x000004E1 System.Void PlayerController::DropObject()
 extern void PlayerController_DropObject_mD167E6664699D00209B40CEA357DD9D446B75755 (void);
-// 0x000004E3 System.Boolean PlayerController::HasGrabbedSomething()
+// 0x000004E2 System.Boolean PlayerController::HasGrabbedSomething()
 extern void PlayerController_HasGrabbedSomething_m7C3835A645315CCB6D0AAE44FBCCE957637C3021 (void);
-// 0x000004E4 System.Void PlayerController::VisitKeyObject(KeyObject)
+// 0x000004E3 System.Void PlayerController::VisitKeyObject(KeyObject)
 extern void PlayerController_VisitKeyObject_m1B56F3D11B02C8B007A155E65905D59E7DC81C6E (void);
-// 0x000004E5 System.Void PlayerController::VisitGrabbable(GrabbableObject)
+// 0x000004E4 System.Void PlayerController::VisitGrabbable(GrabbableObject)
 extern void PlayerController_VisitGrabbable_m74A07A9447DD1C9497A6C377E1D87CFA7EC9B9A8 (void);
-// 0x000004E6 System.Void PlayerController::VisitRoomObject(RoomObject)
+// 0x000004E5 System.Void PlayerController::VisitRoomObject(RoomObject)
 extern void PlayerController_VisitRoomObject_m043F5B32781923A4A61B718985249EFBE108C3B6 (void);
-// 0x000004E7 System.Void PlayerController::VisitOpenable(OpenableObject)
+// 0x000004E6 System.Void PlayerController::VisitOpenable(OpenableObject)
 extern void PlayerController_VisitOpenable_m6005E96051643C2B3EE02FA1788F595083DE33AB (void);
-// 0x000004E8 System.Void PlayerController::VisitUnlockableInteractable(UnlockableInteractable)
+// 0x000004E7 System.Void PlayerController::VisitUnlockableInteractable(UnlockableInteractable)
 extern void PlayerController_VisitUnlockableInteractable_mCE483F22204262B907434C6257B6A622C6CA784F (void);
-// 0x000004E9 System.Void PlayerController::VisitKeyboardObject(KeyboardObject)
+// 0x000004E8 System.Void PlayerController::VisitKeyboardObject(KeyboardObject)
 extern void PlayerController_VisitKeyboardObject_m63AC61C55BB13C92C968702B79570B6FC8023B1A (void);
-// 0x000004EA System.Void PlayerController::VisitPushable(PushableObject)
+// 0x000004E9 System.Void PlayerController::VisitPushable(PushableObject)
 extern void PlayerController_VisitPushable_m981844999B8FABC962FB3EDB5C7A920E6842BC86 (void);
-// 0x000004EB System.Void PlayerController::SeeInteractable(Interactable)
+// 0x000004EA System.Void PlayerController::SeeInteractable(Interactable)
 extern void PlayerController_SeeInteractable_m98FEE04597DF96FA61AD4DED675E8264AAC999EC (void);
-// 0x000004EC System.Void PlayerController::SeeRoomObject(RoomObject)
+// 0x000004EB System.Void PlayerController::SeeRoomObject(RoomObject)
 extern void PlayerController_SeeRoomObject_m1C6925EB7C843CD49AAF9F053644349735875813 (void);
-// 0x000004ED System.Void PlayerController::.ctor()
+// 0x000004EC System.Void PlayerController::.ctor()
 extern void PlayerController__ctor_mDDAB7C7D82E1A5B3E6C197B1AB9D653DFE554F33 (void);
-// 0x000004EE System.Void PushableObject::Start()
+// 0x000004ED System.Void PushableObject::Start()
 extern void PushableObject_Start_mB99564028262CD990009DBF6E45BA209D2203222 (void);
-// 0x000004EF System.Void PushableObject::Accept(IVisitor)
+// 0x000004EE System.Void PushableObject::Accept(IVisitor)
 extern void PushableObject_Accept_m7732409310F8F6D0F8057CC0702E3B8FFB1D1BF7 (void);
-// 0x000004F0 System.Void PushableObject::Push(UnityEngine.Vector3)
+// 0x000004EF System.Void PushableObject::Push(UnityEngine.Vector3)
 extern void PushableObject_Push_mCF4B08C1C80A0F355D5C211C7FEB07B82032CFCC (void);
-// 0x000004F1 System.Void PushableObject::.ctor()
+// 0x000004F0 System.Void PushableObject::.ctor()
 extern void PushableObject__ctor_m7288BC5D91DC181A034FD776695D8AD1F084EE3C (void);
-// 0x000004F2 System.Void RoomObject::Start()
+// 0x000004F1 System.Void RoomObject::Start()
 extern void RoomObject_Start_mE1C054ADE2D5497D766A00EC07B58F941A840633 (void);
-// 0x000004F3 System.Void RoomObject::Accept(IVisitor)
+// 0x000004F2 System.Void RoomObject::Accept(IVisitor)
 extern void RoomObject_Accept_mFEBBE83A6B3E628BC4D07F38623266443F1444E6 (void);
-// 0x000004F4 System.Void RoomObject::See(IVisitor)
+// 0x000004F3 System.Void RoomObject::See(IVisitor)
 extern void RoomObject_See_m2E8BE4C92138B4FA14C5E68C23C140A9AE54F57E (void);
-// 0x000004F5 System.String RoomObject::GetDescription()
+// 0x000004F4 System.String RoomObject::GetDescription()
 extern void RoomObject_GetDescription_m7029DCB5F54B1F7B01A1079C78D4D56673B7F2AB (void);
-// 0x000004F6 System.Void RoomObject::TryOpen(GrabbableObject)
+// 0x000004F5 System.Void RoomObject::TryOpen(GrabbableObject)
 extern void RoomObject_TryOpen_mEC97F3DCF15D04A00A4F495E1F7C54F7FA908CCE (void);
-// 0x000004F7 System.Void RoomObject::SetVisibility(System.Boolean)
+// 0x000004F6 System.Void RoomObject::SetVisibility(System.Boolean)
 extern void RoomObject_SetVisibility_m0AE1887E3C91B762C19B169CAFDD8C797B634B61 (void);
-// 0x000004F8 System.Void RoomObject::.ctor()
+// 0x000004F7 System.Void RoomObject::.ctor()
 extern void RoomObject__ctor_m3425F09CAAF66443BBCF2F6AB7662DD30C329CBE (void);
-// 0x000004F9 System.Void ScreenObject::Start()
+// 0x000004F8 System.Void ScreenObject::Start()
 extern void ScreenObject_Start_mF425364EEEAE385ABE9EEE7410646D7166630D92 (void);
-// 0x000004FA System.Void ScreenObject::Write(System.String)
+// 0x000004F9 System.Void ScreenObject::Write(System.String)
 extern void ScreenObject_Write_m238497FB1945302CB71050049A2ACFCD26046976 (void);
-// 0x000004FB System.Void ScreenObject::Delete()
+// 0x000004FA System.Void ScreenObject::Delete()
 extern void ScreenObject_Delete_m9380274D86C9057137BFA98CBBCECD2CF1348559 (void);
-// 0x000004FC System.String ScreenObject::getText()
+// 0x000004FB System.String ScreenObject::getText()
 extern void ScreenObject_getText_mFC8E5F969EB77EBD416B2E7AE663E77C7E1FF9B6 (void);
-// 0x000004FD System.Void ScreenObject::.ctor()
+// 0x000004FC System.Void ScreenObject::.ctor()
 extern void ScreenObject__ctor_m3E3857045BA084FC23F61252070CAC55567A82FB (void);
-// 0x000004FE System.Void Shelf::OpenAction()
+// 0x000004FD System.Void Shelf::OpenAction()
 extern void Shelf_OpenAction_m2C113183B2F5086AF1AAE04066D2C50636C1621B (void);
-// 0x000004FF System.Void Shelf::.ctor()
+// 0x000004FE System.Void Shelf::.ctor()
 extern void Shelf__ctor_m0064350500A05428EE9CDC3C3C747AC7A2BC2423 (void);
-// 0x00000500 System.Void ShelfKeyObject::MarkAsUsed()
-extern void ShelfKeyObject_MarkAsUsed_mEE1709E1EF2DD127FA63EBB488CD4FFD427FDA88 (void);
-// 0x00000501 System.Void ShelfKeyObject::.ctor()
-extern void ShelfKeyObject__ctor_mAEBE9C3D8C10E0AE19189240B0CEB4E37A218513 (void);
-// 0x00000502 System.Void SpeechTextManager::Awake()
+// 0x000004FF System.Void SpeechTextManager::Awake()
 extern void SpeechTextManager_Awake_m9618CD9747ED06831C27DE96CB8678FDB106DA1A (void);
-// 0x00000503 System.Void SpeechTextManager::Start()
+// 0x00000500 System.Void SpeechTextManager::Start()
 extern void SpeechTextManager_Start_m62825FF4916CB7D92CF848E7ED0DDDB9C3350295 (void);
-// 0x00000504 System.Void SpeechTextManager::StartListening()
+// 0x00000501 System.Void SpeechTextManager::StartListening()
 extern void SpeechTextManager_StartListening_mD90AA7F91C839460C77C1E2E67B1039B615253F3 (void);
-// 0x00000505 System.Void SpeechTextManager::StopListening()
+// 0x00000502 System.Void SpeechTextManager::StopListening()
 extern void SpeechTextManager_StopListening_m549C677518C091AC89112AEB072A4DAB0A947178 (void);
-// 0x00000506 System.Void SpeechTextManager::OnFinalSpeechResult(System.String)
+// 0x00000503 System.Void SpeechTextManager::OnFinalSpeechResult(System.String)
 extern void SpeechTextManager_OnFinalSpeechResult_mA3D15913C940BB7D0E704C0641825472257514CF (void);
-// 0x00000507 System.Void SpeechTextManager::OnPartialSpeechResult(System.String)
+// 0x00000504 System.Void SpeechTextManager::OnPartialSpeechResult(System.String)
 extern void SpeechTextManager_OnPartialSpeechResult_m2C9917843550A782BB8A1CD9D1ACCDEEF893D076 (void);
-// 0x00000508 System.Void SpeechTextManager::StartSpeaking(System.String)
+// 0x00000505 System.Void SpeechTextManager::StartSpeaking(System.String)
 extern void SpeechTextManager_StartSpeaking_mCBF72C9AB79F6CCEA83DE1E767BB5C2F9EA9EF5D (void);
-// 0x00000509 System.Void SpeechTextManager::StopSpeaking()
+// 0x00000506 System.Void SpeechTextManager::StopSpeaking()
 extern void SpeechTextManager_StopSpeaking_m4B9FB0B8A31020D9DC2ACF9760387393778AE544 (void);
-// 0x0000050A System.Void SpeechTextManager::OnSpeakStart()
+// 0x00000507 System.Void SpeechTextManager::OnSpeakStart()
 extern void SpeechTextManager_OnSpeakStart_mE2F5565ADEA9C17922D228BE5FF5F619287F2637 (void);
-// 0x0000050B System.Void SpeechTextManager::OnSpeakStop()
+// 0x00000508 System.Void SpeechTextManager::OnSpeakStop()
 extern void SpeechTextManager_OnSpeakStop_m0B303A9EF0D3A2A1C0B8131C0A5C64D65D1E847B (void);
-// 0x0000050C System.Void SpeechTextManager::.ctor()
+// 0x00000509 System.Void SpeechTextManager::.ctor()
 extern void SpeechTextManager__ctor_m58FDCA101CFB6B72AB1CE42C4E98F1C552C56300 (void);
-// 0x0000050D System.Void StartListeningScript::Start()
+// 0x0000050A System.Void StartListeningScript::Start()
 extern void StartListeningScript_Start_m502B86F057FAED05EEA66F0DE4B8D4EC37F97AF9 (void);
-// 0x0000050E System.Void StartListeningScript::Update()
+// 0x0000050B System.Void StartListeningScript::Update()
 extern void StartListeningScript_Update_m8893D9E7280F10D13F90EACFAD874116AFF12FAD (void);
-// 0x0000050F System.Void StartListeningScript::.ctor()
+// 0x0000050C System.Void StartListeningScript::.ctor()
 extern void StartListeningScript__ctor_m43BC0C13F675A1EAC696E0FC60E4071081020CFB (void);
-// 0x00000510 System.Void UnlockableInteractable::Start()
+// 0x0000050D System.Void UnlockableInteractable::Start()
 extern void UnlockableInteractable_Start_m4B374FDB3170756EA34EFAC6A7D474CC47B5F5FB (void);
-// 0x00000511 System.Void UnlockableInteractable::Accept(IVisitor)
+// 0x0000050E System.Void UnlockableInteractable::Accept(IVisitor)
 extern void UnlockableInteractable_Accept_m6C316FD4CFE5BF2A72395861D58F438F2590D0E8 (void);
-// 0x00000512 System.Void UnlockableInteractable::TryOpen(GrabbableObject)
+// 0x0000050F System.Void UnlockableInteractable::TryOpen(GrabbableObject)
 extern void UnlockableInteractable_TryOpen_m935AB50C225E0B0B7B11BC2CEA6E30323FE3C850 (void);
-// 0x00000513 System.Void UnlockableInteractable::PlayLockedSound()
+// 0x00000510 System.Void UnlockableInteractable::PlayLockedSound()
 extern void UnlockableInteractable_PlayLockedSound_m6BF17053723C80B6254CA41B363C2BB2E7780F43 (void);
-// 0x00000514 System.Void UnlockableInteractable::OpenAction()
-// 0x00000515 System.Void UnlockableInteractable::PlayOpenedSound()
+// 0x00000511 System.Void UnlockableInteractable::OpenAction()
+extern void UnlockableInteractable_OpenAction_m721B988403BA7CFE5E1D8D039390619988EC1CA0 (void);
+// 0x00000512 System.Void UnlockableInteractable::PlayOpenedSound()
 extern void UnlockableInteractable_PlayOpenedSound_m1B4FFCD98C2E18394944A48352521013F1DC72C3 (void);
-// 0x00000516 System.Void UnlockableInteractable::.ctor()
+// 0x00000513 System.Void UnlockableInteractable::.ctor()
 extern void UnlockableInteractable__ctor_m1BF11BC67C7530D7DD3C2601655D869724F5938C (void);
-// 0x00000517 System.Void WriteableBook::Start()
+// 0x00000514 System.Void WriteableBook::Start()
 extern void WriteableBook_Start_mEDBCD1FF1897FD23CF2AB3A731A35DCC50DFEFFD (void);
-// 0x00000518 System.Void WriteableBook::OpenAction()
+// 0x00000515 System.Void WriteableBook::OpenAction()
 extern void WriteableBook_OpenAction_m9D8556D03DA450A4331BD05A161779345DB453FE (void);
-// 0x00000519 System.Void WriteableBook::.ctor()
+// 0x00000516 System.Void WriteableBook::.ctor()
 extern void WriteableBook__ctor_m9F1956A5D705751ED4FE0911F2424AED6578EFA9 (void);
-// 0x0000051A System.Void AndroidDebug::Start()
+// 0x00000517 System.Void AndroidDebug::Start()
 extern void AndroidDebug_Start_m4822C284DF77837C5F7CCF2C249B512BE7E9A0DA (void);
-// 0x0000051B System.Void AndroidDebug::AddLog(System.String)
+// 0x00000518 System.Void AndroidDebug::AddLog(System.String)
 extern void AndroidDebug_AddLog_mB37963CD21A7C3179928879836B47151B553207D (void);
-// 0x0000051C System.Void AndroidDebug::onResultCallback(System.String)
+// 0x00000519 System.Void AndroidDebug::onResultCallback(System.String)
 extern void AndroidDebug_onResultCallback_mAD100BB8B969A1537D491A22ED15C0B467142862 (void);
-// 0x0000051D System.Void AndroidDebug::onReadyForSpeechCallback(System.String)
+// 0x0000051A System.Void AndroidDebug::onReadyForSpeechCallback(System.String)
 extern void AndroidDebug_onReadyForSpeechCallback_m4965D3E224891C1250C1B6AF7AA3751659FEB0FE (void);
-// 0x0000051E System.Void AndroidDebug::onEndOfSpeechCallback()
+// 0x0000051B System.Void AndroidDebug::onEndOfSpeechCallback()
 extern void AndroidDebug_onEndOfSpeechCallback_m43F57FDE9C6768A19411818D1855889CFC85C57A (void);
-// 0x0000051F System.Void AndroidDebug::onRmsChangedCallback(System.Single)
+// 0x0000051C System.Void AndroidDebug::onRmsChangedCallback(System.Single)
 extern void AndroidDebug_onRmsChangedCallback_mF4D118FB9ADB5C2BDC1359F5EAA1E810F83EE827 (void);
-// 0x00000520 System.Void AndroidDebug::onBeginningOfSpeechCallback()
+// 0x0000051D System.Void AndroidDebug::onBeginningOfSpeechCallback()
 extern void AndroidDebug_onBeginningOfSpeechCallback_mD61E1D1C870F83747C1B5BD442E3395C470812C7 (void);
-// 0x00000521 System.Void AndroidDebug::onErrorCallback(System.String)
+// 0x0000051E System.Void AndroidDebug::onErrorCallback(System.String)
 extern void AndroidDebug_onErrorCallback_m0210A74AB99B237CA03C2A33306282BD15376480 (void);
-// 0x00000522 System.Void AndroidDebug::onPartialResultsCallback(System.String)
+// 0x0000051F System.Void AndroidDebug::onPartialResultsCallback(System.String)
 extern void AndroidDebug_onPartialResultsCallback_m8B19C16D7AE6B1EA9BE3535418701C0EC05F77DF (void);
-// 0x00000523 System.Void AndroidDebug::.ctor()
+// 0x00000520 System.Void AndroidDebug::.ctor()
 extern void AndroidDebug__ctor_m3A6795ADA5CB965D80A98D98A5BAE135F79EDB1E (void);
-// 0x00000524 System.Void RotateAnim::Update()
+// 0x00000521 System.Void RotateAnim::Update()
 extern void RotateAnim_Update_m111DC060B09DC4ABABCE1E48EAC4B7925FA908C4 (void);
-// 0x00000525 System.Void RotateAnim::.ctor()
+// 0x00000522 System.Void RotateAnim::.ctor()
 extern void RotateAnim__ctor_mDFD9F157B4A5B2C2FCC862FC4CFD592C0AA3488D (void);
-// 0x00000526 System.Void SampleSpeechToText::Start()
+// 0x00000523 System.Void SampleSpeechToText::Start()
 extern void SampleSpeechToText_Start_m5E89302E144C48D9C1A1D2F93998A8316CF6D9A3 (void);
-// 0x00000527 System.Void SampleSpeechToText::StartRecording()
+// 0x00000524 System.Void SampleSpeechToText::StartRecording()
 extern void SampleSpeechToText_StartRecording_m059A3F1D01D2A8414FAA68A0A07D1523D29916C7 (void);
-// 0x00000528 System.Void SampleSpeechToText::StopRecording()
+// 0x00000525 System.Void SampleSpeechToText::StopRecording()
 extern void SampleSpeechToText_StopRecording_m362CD67DA4DD474FBB9A7047A43B9E778DA8481B (void);
-// 0x00000529 System.Void SampleSpeechToText::OnResultSpeech(System.String)
+// 0x00000526 System.Void SampleSpeechToText::OnResultSpeech(System.String)
 extern void SampleSpeechToText_OnResultSpeech_m65B1CF4F51224F5B6FD1FC76A35CC1650A657AC2 (void);
-// 0x0000052A System.Void SampleSpeechToText::OnClickSpeak()
+// 0x00000527 System.Void SampleSpeechToText::OnClickSpeak()
 extern void SampleSpeechToText_OnClickSpeak_m5D081F15A83024A65D1A83B926E61CF3E1699C86 (void);
-// 0x0000052B System.Void SampleSpeechToText::OnClickStopSpeak()
+// 0x00000528 System.Void SampleSpeechToText::OnClickStopSpeak()
 extern void SampleSpeechToText_OnClickStopSpeak_m902678DC55BFA10920729F5EBD9A3DDE382FE2F9 (void);
-// 0x0000052C System.Void SampleSpeechToText::Setting(System.String)
+// 0x00000529 System.Void SampleSpeechToText::Setting(System.String)
 extern void SampleSpeechToText_Setting_m90A675D5580BA4011341FBD301DCB13493C38ABC (void);
-// 0x0000052D System.Void SampleSpeechToText::OnClickApply()
+// 0x0000052A System.Void SampleSpeechToText::OnClickApply()
 extern void SampleSpeechToText_OnClickApply_m62918FA0B17EF19ECDB4B2DEC81FFC6DFE0022B9 (void);
-// 0x0000052E System.Void SampleSpeechToText::OnToggleShowAndroidPopupChanged(System.Boolean)
+// 0x0000052B System.Void SampleSpeechToText::OnToggleShowAndroidPopupChanged(System.Boolean)
 extern void SampleSpeechToText_OnToggleShowAndroidPopupChanged_m2B34AB12BF7F11D9383215CB477B55285272AB91 (void);
-// 0x0000052F System.Void SampleSpeechToText::.ctor()
+// 0x0000052C System.Void SampleSpeechToText::.ctor()
 extern void SampleSpeechToText__ctor_mE1E3B8C96881BB2E726E13FA373E7F10ECD17A5C (void);
-// 0x00000530 System.Void SpeechButton::Start()
+// 0x0000052D System.Void SpeechButton::Start()
 extern void SpeechButton_Start_m0A82F6028517705BAAA28B01A2F3C385EE4C08DF (void);
-// 0x00000531 System.Void SpeechButton::Update()
+// 0x0000052E System.Void SpeechButton::Update()
 extern void SpeechButton_Update_mD076A40065B1FF1816C44E7A9D41FDB732B18529 (void);
-// 0x00000532 System.Void SpeechButton::OnPointerDown(UnityEngine.EventSystems.PointerEventData)
+// 0x0000052F System.Void SpeechButton::OnPointerDown(UnityEngine.EventSystems.PointerEventData)
 extern void SpeechButton_OnPointerDown_m372F511219F4A37D3ACEE514926F91802B1A8AA1 (void);
-// 0x00000533 System.Void SpeechButton::OnPointerUp(UnityEngine.EventSystems.PointerEventData)
+// 0x00000530 System.Void SpeechButton::OnPointerUp(UnityEngine.EventSystems.PointerEventData)
 extern void SpeechButton_OnPointerUp_m96CC945827D644DC454A3E249ED869D5BD39A58E (void);
-// 0x00000534 System.Void SpeechButton::.ctor()
+// 0x00000531 System.Void SpeechButton::.ctor()
 extern void SpeechButton__ctor_m83CCA24A8022675FBE2F4E2E0EC5B5AF62F0F138 (void);
-// 0x00000535 TextSpeech.SpeechToText TextSpeech.SpeechToText::get_Instance()
+// 0x00000532 TextSpeech.SpeechToText TextSpeech.SpeechToText::get_Instance()
 extern void SpeechToText_get_Instance_m4CE8EADFF870B8B2C43BF7277C3538519CC6CE39 (void);
-// 0x00000536 System.Void TextSpeech.SpeechToText::Awake()
+// 0x00000533 System.Void TextSpeech.SpeechToText::Awake()
 extern void SpeechToText_Awake_m37C3645316DA324CACBAD2DFBDEE9AB60EDB1FBA (void);
-// 0x00000537 System.Void TextSpeech.SpeechToText::Setting(System.String)
+// 0x00000534 System.Void TextSpeech.SpeechToText::Setting(System.String)
 extern void SpeechToText_Setting_mAE3E71A064942397E752B8890E9CB6A5519A6A17 (void);
-// 0x00000538 System.Void TextSpeech.SpeechToText::StartRecording(System.String)
+// 0x00000535 System.Void TextSpeech.SpeechToText::StartRecording(System.String)
 extern void SpeechToText_StartRecording_m37A075A9904FAD1AA81C61B975BB5B4BC2BCA38B (void);
-// 0x00000539 System.Void TextSpeech.SpeechToText::StopRecording()
+// 0x00000536 System.Void TextSpeech.SpeechToText::StopRecording()
 extern void SpeechToText_StopRecording_mD04397264A0D0EB68B7EDB340F34C236414D695E (void);
-// 0x0000053A System.Void TextSpeech.SpeechToText::onMessage(System.String)
+// 0x00000537 System.Void TextSpeech.SpeechToText::onMessage(System.String)
 extern void SpeechToText_onMessage_m41B2F4671E9CEF5E626B58AF9CD4E999FAE280AE (void);
-// 0x0000053B System.Void TextSpeech.SpeechToText::onErrorMessage(System.String)
+// 0x00000538 System.Void TextSpeech.SpeechToText::onErrorMessage(System.String)
 extern void SpeechToText_onErrorMessage_mFC0FF16443D932A5A685778E671B05BB3ACA8DCB (void);
-// 0x0000053C System.Void TextSpeech.SpeechToText::onResults(System.String)
+// 0x00000539 System.Void TextSpeech.SpeechToText::onResults(System.String)
 extern void SpeechToText_onResults_m9CDA0A1123A0540F6AFED6CF88E1F8AD0293749C (void);
-// 0x0000053D System.String TextSpeech.SpeechToText::getErrorText(System.Int32)
+// 0x0000053A System.String TextSpeech.SpeechToText::getErrorText(System.Int32)
 extern void SpeechToText_getErrorText_mE45F06BC7ABD2F5A9A6F3D16A83370CFC1F58E6B (void);
-// 0x0000053E System.Void TextSpeech.SpeechToText::onReadyForSpeech(System.String)
+// 0x0000053B System.Void TextSpeech.SpeechToText::onReadyForSpeech(System.String)
 extern void SpeechToText_onReadyForSpeech_mD72920CDFD7A6248451E6E6D28481A8770D38A67 (void);
-// 0x0000053F System.Void TextSpeech.SpeechToText::onEndOfSpeech(System.String)
+// 0x0000053C System.Void TextSpeech.SpeechToText::onEndOfSpeech(System.String)
 extern void SpeechToText_onEndOfSpeech_m611D5EA0A232C245167E97ACED07DF15C3A0EDE2 (void);
-// 0x00000540 System.Void TextSpeech.SpeechToText::onRmsChanged(System.String)
+// 0x0000053D System.Void TextSpeech.SpeechToText::onRmsChanged(System.String)
 extern void SpeechToText_onRmsChanged_mF37D058AA749490117C41C6F3F87957AACE8DE3F (void);
-// 0x00000541 System.Void TextSpeech.SpeechToText::onBeginningOfSpeech(System.String)
+// 0x0000053E System.Void TextSpeech.SpeechToText::onBeginningOfSpeech(System.String)
 extern void SpeechToText_onBeginningOfSpeech_mE8AB820DF522553BD9CC205986C243F857E44CEE (void);
-// 0x00000542 System.Void TextSpeech.SpeechToText::onError(System.String)
+// 0x0000053F System.Void TextSpeech.SpeechToText::onError(System.String)
 extern void SpeechToText_onError_mD8468F85BE2B0A1515620D602A4033966E3A0D30 (void);
-// 0x00000543 System.Void TextSpeech.SpeechToText::onPartialResults(System.String)
+// 0x00000540 System.Void TextSpeech.SpeechToText::onPartialResults(System.String)
 extern void SpeechToText_onPartialResults_m5FC1238FE736D6ADE358859BD26D4410FCE3969D (void);
-// 0x00000544 System.Void TextSpeech.SpeechToText::.ctor()
+// 0x00000541 System.Void TextSpeech.SpeechToText::.ctor()
 extern void SpeechToText__ctor_m58604FCB643B33D6CD5936816FA681391839276B (void);
-// 0x00000545 TextSpeech.TextToSpeech TextSpeech.TextToSpeech::get_Instance()
+// 0x00000542 TextSpeech.TextToSpeech TextSpeech.TextToSpeech::get_Instance()
 extern void TextToSpeech_get_Instance_m0242720CCA542B2C51140B34F4D34A7310B52342 (void);
-// 0x00000546 System.Void TextSpeech.TextToSpeech::Awake()
+// 0x00000543 System.Void TextSpeech.TextToSpeech::Awake()
 extern void TextToSpeech_Awake_mC2672FC332510129EAC57AC484C4F147FE6F26F3 (void);
-// 0x00000547 System.Void TextSpeech.TextToSpeech::Setting(System.String,System.Single,System.Single)
+// 0x00000544 System.Void TextSpeech.TextToSpeech::Setting(System.String,System.Single,System.Single)
 extern void TextToSpeech_Setting_m5AF9C828CD94717BC6ACE546CAB6E6CC6133A852 (void);
-// 0x00000548 System.Void TextSpeech.TextToSpeech::StartSpeak(System.String)
+// 0x00000545 System.Void TextSpeech.TextToSpeech::StartSpeak(System.String)
 extern void TextToSpeech_StartSpeak_mD4D83D1458D15CA29AB711881FFAADD9888A8B13 (void);
-// 0x00000549 System.Void TextSpeech.TextToSpeech::StopSpeak()
+// 0x00000546 System.Void TextSpeech.TextToSpeech::StopSpeak()
 extern void TextToSpeech_StopSpeak_m9C07C9237F4677C2D586769ACBEB9EE76F2AE4C7 (void);
-// 0x0000054A System.Void TextSpeech.TextToSpeech::onSpeechRange(System.String)
+// 0x00000547 System.Void TextSpeech.TextToSpeech::onSpeechRange(System.String)
 extern void TextToSpeech_onSpeechRange_mE2CEDF8B552C4CD9B020A4A9CA9E8CCA211FB8BF (void);
-// 0x0000054B System.Void TextSpeech.TextToSpeech::onStart(System.String)
+// 0x00000548 System.Void TextSpeech.TextToSpeech::onStart(System.String)
 extern void TextToSpeech_onStart_m5BE7ED24FFCC4B7156E602166E5C02E98A4B68E7 (void);
-// 0x0000054C System.Void TextSpeech.TextToSpeech::onDone(System.String)
+// 0x00000549 System.Void TextSpeech.TextToSpeech::onDone(System.String)
 extern void TextToSpeech_onDone_m054A4EBB55738FACB0850D101DDCD75BAE75E4C6 (void);
-// 0x0000054D System.Void TextSpeech.TextToSpeech::onError(System.String)
+// 0x0000054A System.Void TextSpeech.TextToSpeech::onError(System.String)
 extern void TextToSpeech_onError_mF8003FB4A687039E13C9651D32C4A282128DEDA0 (void);
-// 0x0000054E System.Void TextSpeech.TextToSpeech::onMessage(System.String)
+// 0x0000054B System.Void TextSpeech.TextToSpeech::onMessage(System.String)
 extern void TextToSpeech_onMessage_m878989CF5FCA5B554EB70D8F4CA66D69CB53CD50 (void);
-// 0x0000054F System.Void TextSpeech.TextToSpeech::onSettingResult(System.String)
+// 0x0000054C System.Void TextSpeech.TextToSpeech::onSettingResult(System.String)
 extern void TextToSpeech_onSettingResult_mFFA1CA90EFA4589AA8F1D4D17B22D0595E416B46 (void);
-// 0x00000550 System.Void TextSpeech.TextToSpeech::.ctor()
+// 0x0000054D System.Void TextSpeech.TextToSpeech::.ctor()
 extern void TextToSpeech__ctor_mCDBD004B621E2A1386AFDC13416A115CCE2A9F49 (void);
-// 0x00000551 System.Object IronSourceJSON.Json::Deserialize(System.String)
+// 0x0000054E System.Object IronSourceJSON.Json::Deserialize(System.String)
 extern void Json_Deserialize_m8FE82986ED46C15633CE71CEA565F9436B6474A4 (void);
-// 0x00000552 System.String IronSourceJSON.Json::Serialize(System.Object)
+// 0x0000054F System.String IronSourceJSON.Json::Serialize(System.Object)
 extern void Json_Serialize_mC01A3EE8555C42F6DA02F3BFBF75C3E8F7D2342B (void);
-// 0x00000553 System.Void IronSourceJSON.Json/Parser::.ctor(System.String)
+// 0x00000550 System.Void IronSourceJSON.Json/Parser::.ctor(System.String)
 extern void Parser__ctor_mF6E2F8B708BC8DA7BDB80DAD1DF622355BF50536 (void);
-// 0x00000554 System.Object IronSourceJSON.Json/Parser::Parse(System.String)
+// 0x00000551 System.Object IronSourceJSON.Json/Parser::Parse(System.String)
 extern void Parser_Parse_m550577AC93E71023378D27EA1361383BA16504CE (void);
-// 0x00000555 System.Void IronSourceJSON.Json/Parser::Dispose()
+// 0x00000552 System.Void IronSourceJSON.Json/Parser::Dispose()
 extern void Parser_Dispose_mC88EEDDFE3CDB836F3AF49F721D3614158DED3A1 (void);
-// 0x00000556 System.Collections.Generic.Dictionary`2<System.String,System.Object> IronSourceJSON.Json/Parser::ParseObject()
+// 0x00000553 System.Collections.Generic.Dictionary`2<System.String,System.Object> IronSourceJSON.Json/Parser::ParseObject()
 extern void Parser_ParseObject_mF3509D092287719C782B830F60B511483B9E570B (void);
-// 0x00000557 System.Collections.Generic.List`1<System.Object> IronSourceJSON.Json/Parser::ParseArray()
+// 0x00000554 System.Collections.Generic.List`1<System.Object> IronSourceJSON.Json/Parser::ParseArray()
 extern void Parser_ParseArray_m3F732244DC13726B9DB99A9A335D4E8A9B31A575 (void);
-// 0x00000558 System.Object IronSourceJSON.Json/Parser::ParseValue()
+// 0x00000555 System.Object IronSourceJSON.Json/Parser::ParseValue()
 extern void Parser_ParseValue_m1BDF43E4AD2A64690AAFB6DBA800472F2A94272B (void);
-// 0x00000559 System.Object IronSourceJSON.Json/Parser::ParseByToken(IronSourceJSON.Json/Parser/TOKEN)
+// 0x00000556 System.Object IronSourceJSON.Json/Parser::ParseByToken(IronSourceJSON.Json/Parser/TOKEN)
 extern void Parser_ParseByToken_mF0830ED1965E050AE0195353B26ADB01C87E18F1 (void);
-// 0x0000055A System.String IronSourceJSON.Json/Parser::ParseString()
+// 0x00000557 System.String IronSourceJSON.Json/Parser::ParseString()
 extern void Parser_ParseString_m4913878D0B3878423C25644610F690615E7724C2 (void);
-// 0x0000055B System.Object IronSourceJSON.Json/Parser::ParseNumber()
+// 0x00000558 System.Object IronSourceJSON.Json/Parser::ParseNumber()
 extern void Parser_ParseNumber_mDE9009CD828B692F4E5683708FEC450BF88D465F (void);
-// 0x0000055C System.Void IronSourceJSON.Json/Parser::EatWhitespace()
+// 0x00000559 System.Void IronSourceJSON.Json/Parser::EatWhitespace()
 extern void Parser_EatWhitespace_m3D91DD801FB915B39B1A5B133CB159DA4A6D2CF1 (void);
-// 0x0000055D System.Char IronSourceJSON.Json/Parser::get_PeekChar()
+// 0x0000055A System.Char IronSourceJSON.Json/Parser::get_PeekChar()
 extern void Parser_get_PeekChar_m631004C7D090E106B50F8CDFA62CB254B8C5553A (void);
-// 0x0000055E System.Char IronSourceJSON.Json/Parser::get_NextChar()
+// 0x0000055B System.Char IronSourceJSON.Json/Parser::get_NextChar()
 extern void Parser_get_NextChar_m93C329D94339309A4654DF11D6C06D4D1ABBDBDF (void);
-// 0x0000055F System.String IronSourceJSON.Json/Parser::get_NextWord()
+// 0x0000055C System.String IronSourceJSON.Json/Parser::get_NextWord()
 extern void Parser_get_NextWord_m0FDD048038CF96F085F527E30FB94893225C2725 (void);
-// 0x00000560 IronSourceJSON.Json/Parser/TOKEN IronSourceJSON.Json/Parser::get_NextToken()
+// 0x0000055D IronSourceJSON.Json/Parser/TOKEN IronSourceJSON.Json/Parser::get_NextToken()
 extern void Parser_get_NextToken_m2CF12E0515A498D7CD696E6065BB8F5401182EB4 (void);
-// 0x00000561 System.Void IronSourceJSON.Json/Serializer::.ctor()
+// 0x0000055E System.Void IronSourceJSON.Json/Serializer::.ctor()
 extern void Serializer__ctor_m75AAE9DA26CF48B1C8608E850915E74AC135BD0F (void);
-// 0x00000562 System.String IronSourceJSON.Json/Serializer::Serialize(System.Object)
+// 0x0000055F System.String IronSourceJSON.Json/Serializer::Serialize(System.Object)
 extern void Serializer_Serialize_m074256116E009BD598CCC76D76661DFADCA49C09 (void);
-// 0x00000563 System.Void IronSourceJSON.Json/Serializer::SerializeValue(System.Object)
+// 0x00000560 System.Void IronSourceJSON.Json/Serializer::SerializeValue(System.Object)
 extern void Serializer_SerializeValue_m402A1869F9E3A33F621B305ED4C2322D6C1B16A7 (void);
-// 0x00000564 System.Void IronSourceJSON.Json/Serializer::SerializeObject(System.Collections.IDictionary)
+// 0x00000561 System.Void IronSourceJSON.Json/Serializer::SerializeObject(System.Collections.IDictionary)
 extern void Serializer_SerializeObject_m76665B596B2DA337CFBAFD5374CBC170E29AE684 (void);
-// 0x00000565 System.Void IronSourceJSON.Json/Serializer::SerializeArray(System.Collections.IList)
+// 0x00000562 System.Void IronSourceJSON.Json/Serializer::SerializeArray(System.Collections.IList)
 extern void Serializer_SerializeArray_mCC39C55C650C20A797385B9B3737F6DF08ECB30D (void);
-// 0x00000566 System.Void IronSourceJSON.Json/Serializer::SerializeString(System.String)
+// 0x00000563 System.Void IronSourceJSON.Json/Serializer::SerializeString(System.String)
 extern void Serializer_SerializeString_m5FB343C30BD22AB9DE403EB8135FF8C9A58DBF4C (void);
-// 0x00000567 System.Void IronSourceJSON.Json/Serializer::SerializeOther(System.Object)
+// 0x00000564 System.Void IronSourceJSON.Json/Serializer::SerializeOther(System.Object)
 extern void Serializer_SerializeOther_m1ADF12DA620629116FC15C5FF3E60019B8409AA0 (void);
-static Il2CppMethodPointer s_methodPointers[1383] = 
+static Il2CppMethodPointer s_methodPointers[1380] = 
 {
 	interact_Start_mA26CF841B41EB3F6D58CD8AB084D2EA178DB303C,
 	interact_Update_mEA76CE7427FE9A6B15F2E278B8BC75E66E654E73,
@@ -3754,8 +3749,6 @@ static Il2CppMethodPointer s_methodPointers[1383] =
 	U3CSendRequestU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0E302E994060DE8C6C67E65D9C9DAE7CA3C173B0,
 	U3CSendRequestU3Ed__11_System_Collections_IEnumerator_Reset_m45BF300BCAAFDBACED6B53B302F44DA6CE4EE76F,
 	U3CSendRequestU3Ed__11_System_Collections_IEnumerator_get_Current_m5FBB0C2783B2880A0B1536F1240F6F2BA918ED3C,
-	ClosedDoor_OpenAction_m0CE7BE1726382D2218D813D47DC538B107C8A829,
-	ClosedDoor__ctor_m83FA2C1D2462041DA9108BEE6F4A04418A129DA1,
 	DigitalLock_Start_m4D1BF7AE022BD533C445A24D2CC07FAAE158577F,
 	DigitalLock_Write_m5813324386F6E8C2E3972B097451E2D4A3EC3BA0,
 	DigitalLock__ctor_m904D1F60E65B962DB4BD05CFFBD4C798D73BF708,
@@ -3797,9 +3790,10 @@ static Il2CppMethodPointer s_methodPointers[1383] =
 	KeyboardObject_Write_mD72C134FBB5C2100CA21E350BA5BE24B715FF5A5,
 	KeyboardObject_GetKey_m023F5F4304F4A7CDF95A827579AFAD6D06E69C60,
 	KeyboardObject__ctor_mBC4595DC6DFD29BFA779ABE548A19CCBC510311B,
-	KeyObject_MarkAsUsed_m6E264809F4361030315E5290AB2CDC7BADF96537,
+	KeyObject_Dissapear_m32867F1AF701E85B2CC2B140903F8F698556D5A2,
 	KeyObject_Accept_m7350438FF35576567D8E608AC0028E67CABB987C,
 	KeyObject_TryOpen_mEF900C4A44BA6DE4B449079DBE5E4EDDD4936CD5,
+	KeyObject_ToShelfScale_mAC0C5E27B27CB83B1472082D8FB9F1E5D141122F,
 	KeyObject__ctor_mD953EA234314696520C74EE29C5CAB1B5BAD939B,
 	ObjectDetector_get_hitPoint_mDA4B08A96C1E0C0B35F6E13501D387DEB5604689,
 	ObjectDetector_set_hitPoint_mB0A42A960C1AB68B443AE7F04DD8192692A65A87,
@@ -3819,6 +3813,7 @@ static Il2CppMethodPointer s_methodPointers[1383] =
 	OpenableObject_Start_m7172FF7735A5D1B8207597BDFD9047E3C8A3FC14,
 	OpenableObject_Accept_m05DBBA7F0D18B98B1692649DF908F0557037CEF3,
 	OpenableObject_TryOpen_m859DD88DABC293ACB5E50EB5DA01FCE4E850E072,
+	OpenableObject_PlayOpenedSound_mEBABDB47678DCF7D5064FE0198522C67546BFFB3,
 	OpenableObject__ctor_m5C8F9A6F0B41CB42EBDF2344D889E124D18BBB33,
 	OpenableWithPassword_Start_mF01F61735DACFA737A0086B0380788377E84418F,
 	OpenableWithPassword_TryOpen_mA04488A219A5D3E2BF303D649036BAD8C6CABAA1,
@@ -3828,7 +3823,6 @@ static Il2CppMethodPointer s_methodPointers[1383] =
 	PlayerController_Start_m1D83076E8B136A71051F2F02545EE04947D3A8CF,
 	PlayerController_Update_m1F4051EB5BCBCCE5EEE2E3E49B7E278C3B14EC33,
 	PlayerController_PlayerMovement_mEBAFA1FC1373E9645C8C699F71CA29D8A3DAE027,
-	PlayerController_GazeSelection_mFC3424DCD4134C9C2F320DA4FBBBD7F3DA1DF124,
 	PlayerController_GrabObject_mC5B3034A93E2D0AD6DFCA887ACD5471C321CAA8D,
 	PlayerController_DropObject_mD167E6664699D00209B40CEA357DD9D446B75755,
 	PlayerController_HasGrabbedSomething_m7C3835A645315CCB6D0AAE44FBCCE957637C3021,
@@ -3860,8 +3854,6 @@ static Il2CppMethodPointer s_methodPointers[1383] =
 	ScreenObject__ctor_m3E3857045BA084FC23F61252070CAC55567A82FB,
 	Shelf_OpenAction_m2C113183B2F5086AF1AAE04066D2C50636C1621B,
 	Shelf__ctor_m0064350500A05428EE9CDC3C3C747AC7A2BC2423,
-	ShelfKeyObject_MarkAsUsed_mEE1709E1EF2DD127FA63EBB488CD4FFD427FDA88,
-	ShelfKeyObject__ctor_mAEBE9C3D8C10E0AE19189240B0CEB4E37A218513,
 	SpeechTextManager_Awake_m9618CD9747ED06831C27DE96CB8678FDB106DA1A,
 	SpeechTextManager_Start_m62825FF4916CB7D92CF848E7ED0DDDB9C3350295,
 	SpeechTextManager_StartListening_mD90AA7F91C839460C77C1E2E67B1039B615253F3,
@@ -3880,7 +3872,7 @@ static Il2CppMethodPointer s_methodPointers[1383] =
 	UnlockableInteractable_Accept_m6C316FD4CFE5BF2A72395861D58F438F2590D0E8,
 	UnlockableInteractable_TryOpen_m935AB50C225E0B0B7B11BC2CEA6E30323FE3C850,
 	UnlockableInteractable_PlayLockedSound_m6BF17053723C80B6254CA41B363C2BB2E7780F43,
-	NULL,
+	UnlockableInteractable_OpenAction_m721B988403BA7CFE5E1D8D039390619988EC1CA0,
 	UnlockableInteractable_PlayOpenedSound_m1B4FFCD98C2E18394944A48352521013F1DC72C3,
 	UnlockableInteractable__ctor_m1BF11BC67C7530D7DD3C2601655D869724F5938C,
 	WriteableBook_Start_mEDBCD1FF1897FD23CF2AB3A731A35DCC50DFEFFD,
@@ -3965,7 +3957,7 @@ static Il2CppMethodPointer s_methodPointers[1383] =
 	Serializer_SerializeString_m5FB343C30BD22AB9DE403EB8135FF8C9A58DBF4C,
 	Serializer_SerializeOther_m1ADF12DA620629116FC15C5FF3E60019B8409AA0,
 };
-static const int32_t s_InvokerIndices[1383] = 
+static const int32_t s_InvokerIndices[1380] = 
 {
 	4566,
 	4566,
@@ -5141,8 +5133,6 @@ static const int32_t s_InvokerIndices[1383] =
 	4566,
 	4464,
 	4566,
-	4566,
-	4566,
 	3633,
 	4566,
 	4566,
@@ -5187,6 +5177,7 @@ static const int32_t s_InvokerIndices[1383] =
 	3633,
 	3633,
 	4566,
+	4566,
 	4558,
 	3715,
 	4464,
@@ -5207,11 +5198,11 @@ static const int32_t s_InvokerIndices[1383] =
 	3633,
 	4566,
 	4566,
+	4566,
 	3633,
 	4566,
 	4464,
 	3633,
-	4566,
 	4566,
 	4566,
 	4566,
@@ -5250,8 +5241,6 @@ static const int32_t s_InvokerIndices[1383] =
 	4566,
 	4566,
 	4566,
-	4566,
-	4566,
 	3633,
 	3633,
 	3633,
@@ -5266,7 +5255,7 @@ static const int32_t s_InvokerIndices[1383] =
 	3633,
 	3633,
 	4566,
-	0,
+	4566,
 	4566,
 	4566,
 	4566,
@@ -5355,7 +5344,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	1383,
+	1380,
 	s_methodPointers,
 	0,
 	NULL,

@@ -4664,7 +4664,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196512885}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.16}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4674,7 +4674,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.14, y: -1.4}
+  m_AnchoredPosition: {x: 0.4, y: -1}
   m_SizeDelta: {x: 0.1, y: 0.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &196512887
@@ -4945,7 +4945,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206814692}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.62}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4955,7 +4955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1, y: -1.4}
+  m_AnchoredPosition: {x: 0.4, y: -1}
   m_SizeDelta: {x: 0.1, y: 0.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &206814694
@@ -6637,6 +6637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Cofre con candado cerrado
   player: {fileID: 907292811}
+  openedAudioSource: {fileID: 521593652}
 --- !u!65 &316289038
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9551,7 +9552,7 @@ Transform:
   m_GameObject: {fileID: 482020032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.75, y: -0.723, z: -2.0349998}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1994452800}
@@ -11661,7 +11662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 568653527279986074, guid: c65426a375c90574a95eaaf4840e9481, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 568653527279986074, guid: c65426a375c90574a95eaaf4840e9481, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17911,7 +17912,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834600868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.689}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17920,7 +17921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.186, y: -0.075}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.15, y: 0.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &834600870
@@ -18923,9 +18924,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a242c4081da0f8c41bebd36516b13ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: "Hacha del medioevo peque\xF1a"
+  description: "Hacha peque\xF1a"
   player: {fileID: 907292811}
-  shelfScale: {x: 0.5, y: 0.5, z: 0.5}
+  shelfScale: {x: 0.2, y: 0.2, z: 0.2}
 --- !u!64 &886252329
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25093,7 +25094,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106806459}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23400012, y: 0.071555376, z: -0.40700057}
+  m_LocalPosition: {x: 0.23400012, y: -0.11, z: -0.40700057}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25322,7 +25323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8196095993567047755, guid: 84521e996411c594e931098a6e6abaf9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.792
+      value: -0.97
       objectReference: {fileID: 0}
     - target: {fileID: 8196095993567047755, guid: 84521e996411c594e931098a6e6abaf9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26130,7 +26131,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147552220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.56}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26139,7 +26140,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.19, y: -0.075}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.15, y: 0.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1147552222
@@ -31137,7 +31138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3623110009381905636, guid: b1b274e688ccf4a498214739f457b72d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.007
+      value: -0.208
       objectReference: {fileID: 0}
     - target: {fileID: 3623110009381905636, guid: b1b274e688ccf4a498214739f457b72d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37823,7 +37824,7 @@ Transform:
   m_GameObject: {fileID: 1782818076}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.75, y: -0.228, z: -1.643}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 180179648}
@@ -39870,7 +39871,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878323501}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.35}
+  m_LocalPosition: {x: 0, y: 0, z: 0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39880,7 +39881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.15, y: -0.88}
+  m_AnchoredPosition: {x: 0.444, y: -1}
   m_SizeDelta: {x: 0.1, y: 0.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1878323503
@@ -40979,7 +40980,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921495820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.689}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40988,7 +40989,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.186, y: -0.075}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.15, y: 0.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1921495822
@@ -42335,7 +42336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 268294596766450495, guid: 866c46af1d183dc4499d8c996de328b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.041
+      value: -0.14
       objectReference: {fileID: 0}
     - target: {fileID: 268294596766450495, guid: 866c46af1d183dc4499d8c996de328b3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -42786,7 +42787,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018868597}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.083, y: 0.071555376, z: -0.379}
+  m_LocalPosition: {x: 1.083, y: -0.11, z: -0.379}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -43988,7 +43989,7 @@ Transform:
   m_GameObject: {fileID: 2082902622}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.75, y: -0.723, z: -1.242}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 119223889}
@@ -45130,7 +45131,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 2
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -45403,9 +45404,9 @@ GameObject:
   - component: {fileID: 5826582560150298024}
   - component: {fileID: 2602557820385951119}
   - component: {fileID: 1528194367490663862}
+  - component: {fileID: 5826582560150298028}
   - component: {fileID: 1404298185}
   - component: {fileID: 5826582560150298027}
-  - component: {fileID: 5826582560150298028}
   m_Layer: 0
   m_Name: Door (1)
   m_TagString: Something
@@ -49066,11 +49067,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 374289201315083259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1963b5e01ddc2dc4fb930c53e147f155, type: 3}
+  m_Script: {fileID: 11500000, guid: a242c4081da0f8c41bebd36516b13ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Llave
+  description: llave
   player: {fileID: 907292811}
+  shelfScale: {x: 0, y: 0, z: 0}
 --- !u!1 &5642404758645397498
 GameObject:
   m_ObjectHideFlags: 0
@@ -49703,10 +49705,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 416386657334621191}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21b31d0b996f93f419258f71d61a5c7d, type: 3}
+  m_Script: {fileID: 11500000, guid: 45dd1fe72ceef3a44b0c7506ccecc82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Puerta cerrada con un simbolo de llave en la parte de arriba al frente
+  description: Puerta cerrada con un simbolo de una llave en su parte de arriba
   key: {fileID: 5634532464383736801}
   lockedAudioSource: {fileID: 925450246}
   openedAudioSource: {fileID: 521593652}
