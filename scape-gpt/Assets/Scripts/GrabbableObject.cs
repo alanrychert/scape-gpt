@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrabbableObject : RoomObject
+public class GrabbableObject : Interactable
 {
     private bool isGrabbed;
     private Vector3 originalRotation;

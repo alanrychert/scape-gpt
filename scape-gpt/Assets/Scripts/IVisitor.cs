@@ -10,5 +10,8 @@ public interface IVisitor
     public void VisitKeyboardObject(KeyboardObject keyboardObject);
     public void VisitPushable(PushableObject pushable);
     public void VisitKeyObject(KeyObject pushable);
+    public void VisitUnlockableInteractable(UnlockableInteractable unlockableInteractable);
+    public void SeeRoomObject(RoomObject roomObject);
+    public void SeeInteractable(Interactable interactable);
     // public void VisitUnlockableInteractable(UnlockableInteractable unlockable);
 }

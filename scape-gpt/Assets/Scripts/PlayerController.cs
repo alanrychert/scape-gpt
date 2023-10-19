@@ -28,19 +28,22 @@ public class PlayerController : MonoBehaviour, IVisitor
     void Update()
     {
         _gazedObject = playerCamera.Detect();
-        roomInformation += _gazedObject?.See();
+        if (_gazedObject != null)
+            _gazedObject.See(this);
+        else 
+            playerCamera.ShowInteractText(false);
         PlayerMovement();
-            if (Input.GetButtonDown("Fire1")){
-                if (!_grabbedObject){
-                    _gazedObject?.Accept(this);
-                }
-                else{
-                    _grabbedObject.Accept(this);
-                }
+        if (Input.GetButtonDown("Fire1")){
+            if (!_grabbedObject){
+                _gazedObject?.Accept(this);
             }
-            else
-                if (Input.GetButtonDown("Fire2"))
-                    speechTextManager.StopSpeaking();
+            else{
+                _grabbedObject.Accept(this);
+            }
+        }
+        else
+            if (Input.GetButtonDown("Fire2"))
+                speechTextManager.StopSpeaking();
     }
 
     void PlayerMovement(){
@@ -94,10 +97,22 @@ public class PlayerController : MonoBehaviour, IVisitor
     public void VisitOpenable(OpenableObject openable){
         openable.TryOpen(_grabbedObject);
     }
+    public void VisitUnlockableInteractable(UnlockableInteractable unlockableInteractable){
+        unlockableInteractable.TryOpen(_grabbedObject);
+    }
     public void VisitKeyboardObject(KeyboardObject keyboardObject){
         keyboardObject.Write();
     }
     public void VisitPushable(PushableObject pushable){
-        pushable.push();
+        Vector3 playerForward = playerCamera.transform.forward;
+        pushable.Push(playerForward);
+    }
+    public void SeeInteractable(Interactable interactable){
+        playerCamera.ShowInteractText(true);
+        roomInformation += " " + interactable.GetDescription();
+    }
+    public void SeeRoomObject(RoomObject roomObject){
+        playerCamera.ShowInteractText(false);
+        roomInformation += " " + roomObject.GetDescription(); 
     }
 }

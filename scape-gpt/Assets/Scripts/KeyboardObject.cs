@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class KeyboardObject : RoomObject
+public class KeyboardObject : Interactable
 {
     [SerializeField] DigitalLock digitalLock;
     [SerializeField] string key;

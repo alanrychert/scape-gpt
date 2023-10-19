@@ -1,10 +1,9 @@
 using UnityEngine;
 
-public class PushableObject : RoomObject
+public class PushableObject : Interactable
 {
-    [SerializeField] PlayerController player;
     private Rigidbody _rigidBody;
-    public float PushingVelocity = 4f;
+    public float PushingVelocity = 15f;
 
     protected override void Start(){
         base.Start();
@@ -13,9 +12,13 @@ public class PushableObject : RoomObject
     public override void Accept(IVisitor v){
         v.VisitPushable(this);
     }
-    public void push(){
-        Vector3 direction = (transform.position - player.transform.position);
-        direction.y = 0;
-        transform.Translate(direction.normalized * PushingVelocity * Time.deltaTime);
+
+    public void Push(Vector3 direction){
+        // Normaliza la dirección para asegurarse de que la fuerza tenga la misma intensidad en cualquier dirección.
+        direction.Normalize();
+
+        // Aplica una fuerza en la dirección especificada.
+        _rigidBody.AddForce(direction * PushingVelocity, ForceMode.Impulse);
+        _rigidBody.AddForce(Vector3.up, ForceMode.Impulse);
     }
 }

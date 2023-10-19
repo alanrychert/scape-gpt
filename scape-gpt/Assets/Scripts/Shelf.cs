@@ -5,9 +5,11 @@ using TMPro;
 
 public class Shelf : UnlockableInteractable
 {
+    [SerializeField] TextMeshProUGUI text;
+
     protected override void OpenAction(){
         key.MoveToObject(this.gameObject);
-        key.ToShelfScale();
         key.SetVisibility(true);
+        text.enabled = true;
     }
 }

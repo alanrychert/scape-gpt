@@ -16,7 +16,11 @@ public class RoomObject: MonoBehaviour
         v.VisitRoomObject(this);
     }
 
-    public string See(){
+    public virtual void See(IVisitor v){
+        v.SeeRoomObject(this);
+    }
+
+    public string GetDescription(){
         string result = "";
         if (!hasBeenSeen){
             result+=description;

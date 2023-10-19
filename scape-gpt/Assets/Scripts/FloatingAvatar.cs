@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FloatingAvatar : RoomObject
+public class FloatingAvatar : Interactable
 {
     [SerializeField] public Transform objetivo; // El objeto que seguirá (el PlayerController)
     [SerializeField] public SpeechTextManager speechTextManager;
@@ -10,7 +10,7 @@ public class FloatingAvatar : RoomObject
     public float amplitudFlotacion = 1f; // Amplitud de la flotación
     public float velocidadFlotacion = 2f; // Velocidad de flotación
     public float lightRangeWhenListening=0.7f;
-    public float lightRangeWhenNotListening=0.55f;
+    public float lightRangeWhenNotListening=0.45f;
 
     private Vector3 posicionInicial;
     private float tiempoInicio;
