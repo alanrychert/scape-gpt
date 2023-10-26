@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour, IVisitor
     }
     public void VisitRoomObject(RoomObject roomObject){}
     public void VisitOpenable(OpenableObject openable){
-        openable.TryOpen(_grabbedObject);
+        openable.Open();
     }
     public void VisitUnlockableInteractable(UnlockableInteractable unlockableInteractable){
         unlockableInteractable.TryOpen(_grabbedObject);
@@ -105,10 +105,14 @@ public class PlayerController : MonoBehaviour, IVisitor
     }
     public void SeeInteractable(Interactable interactable){
         playerCamera.ShowInteractText(true);
-        roomInformation += " " + interactable.GetDescription();
+        var description = interactable.GetDescription();
+        if (description.Length>0)
+            roomInformation += ", " + description;
     }
     public void SeeRoomObject(RoomObject roomObject){
         playerCamera.ShowInteractText(false);
-        roomInformation += " " + roomObject.GetDescription(); 
+        var description = roomObject.GetDescription();
+        if (description.Length>0)
+            roomInformation += ", " + description; 
     }
 }

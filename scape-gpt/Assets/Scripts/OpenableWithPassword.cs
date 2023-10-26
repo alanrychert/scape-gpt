@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class OpenableWithPassword : RoomObject
 {
-    [SerializeField] private PlayerController player;
     [SerializeField] private string password;
     private bool open;
 

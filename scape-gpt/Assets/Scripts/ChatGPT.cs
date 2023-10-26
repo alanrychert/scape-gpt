@@ -24,11 +24,11 @@ public class ChatGPT : MonoBehaviour
 
     private RequestBodyChatGPT requestBodyChatGPT;
     private ResponseBodyChatGPT responseBodyChatGPT;
-    [SerializeField] private string promptHeader = "Sala de Escape. Actuaras como el segundo miembro de un grupo de 2 personas que quiere resolver esta sala de escape. ";
-    [SerializeField] private string promptPossibleActionsList= " El jugador solo puede agarrar, soltar, empujar, abrir, y colocar objetos en otros. no puede hacer ninguna otra accion. no se puede interactuar con todos los objetos. Depende del objeto específico lo que el jugador puede hacer con él, y a veces es necesario tener cierto objeto agarrado para poder interactuar con otro. ";
-    [SerializeField] private string promptObjectListStart = " El jugador solo vio los siguientes objetos (puede haber más). Si aparece un mismo objeto más de una vez, es porque el jugador vio mas de uno en la sala: ";
-    [SerializeField] private string promptTail = "La respuesta debe ser en español y solo debe responder a su consulta específica. Dado que no sabes qué interacciones se puede realizar con cada objeto, nunca asegures que el jugador puede hacer algo con un objeto específico. Asume que la persona que te esta consultando es el jugador, es decir, respondele al jugador. Responde con sugerencias, sin afirmar que lo que propones es correcto o se puede realizar. Si el jugador realiza una pregunta que no se refiere a la sala de escape, como por ejemplo un saludo, solo contesta lo que pregunta. Puedes responder utilizando tu inventiva o inferencias sin importar que no tengas la informacion suficiente, pero siempre respetando la lista de acciones posibles. Antes de responder, corta cualquier respuesta que hayas estado desarrollando. Recuerda solo responder especificamente la consulta que siga despues de 'La consulta del jugador es', pero usando todos los detalles de este prompt para armar la respuesta. no le menciones al jugador lo que dice este prompt. ";
-    [SerializeField] private string playerQuestionHeader = " La consulta del jugador es:";
+    private string promptHeader = "Contexto: Actuaras como el acompañante de un jugador que quiere resolver esta sala de escape. \n";
+    private string promptPossibleActionsList= "Es importante recalcar que el jugador solo puede agarrar, soltar, empujar, abrir, y colocar objetos en otros. No puede hacer ninguna otra acción. No se puede interactuar con todos los objetos. \n";
+    private string promptObjectListStart = "El jugador solo vio los objetos listados a continuación, si aparece un mismo objeto más de una vez, es porque el jugador vio más de uno en la sala: Caja ";
+    private string promptTail = "Dado que no sabes qué interacciones se puede realizar con cada objeto, sientete libre de sugerir cosas sensatas, pero nunca asegures que el jugador puede hacer algo con un objeto específico.\n";
+    private string playerQuestionHeader = "Tu tarea como acompañante: basandote en el contexto dado pero sin mencionarlo explicitamente. IMPORTANTE: respondele al jugador, no a la totalidad de este prompt. La consulta del jugador es:\n";
     // Send a request to the OpenAI GPT-3 API and return the response as a string
     private IEnumerator SendRequest(string input, System.Action<string> onComplete)
     {
@@ -66,8 +66,9 @@ public class ChatGPT : MonoBehaviour
 
     public void MakeRequest(string playerQuestion)
     {
-        string requestInput = promptHeader + promptPossibleActionsList + promptObjectListStart + player.roomInformation + playerQuestionHeader + playerQuestion + promptTail;
+        string requestInput = promptHeader + promptPossibleActionsList + promptObjectListStart + player.roomInformation + "\n" + playerQuestionHeader + playerQuestion + promptTail;
         Debug.Log("Hola la consulta entera fue: " +requestInput);
+        Debug.Log("casualmente lo que vio el usuario es: "+player.roomInformation);
         StartCoroutine(SendRequest(requestInput, (response) =>
         {
             speechTextManager.StartSpeaking(response);

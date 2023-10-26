@@ -1,5 +1,5 @@
 using UnityEngine;
-public class UnlockableInteractable : Interactable
+public abstract class UnlockableInteractable : Interactable
 {
     [SerializeField] protected KeyObject key;
     [SerializeField] protected AudioSource lockedAudioSource;
@@ -18,6 +18,7 @@ public class UnlockableInteractable : Interactable
             grabbable.SetVisibility(false);
             OpenAction();
             PlayOpenedSound();
+            key.Use();
         }
         else{
             PlayLockedSound();
@@ -28,10 +29,7 @@ public class UnlockableInteractable : Interactable
         lockedAudioSource.Play();
     }
 
-    protected virtual void OpenAction(){
-        this.transform.Rotate(new Vector3 (0,90,0));
-        this.transform.position = this.transform.parent.transform.position - new Vector3(0.8f,0f,-0.8f);
-    }
+    protected abstract void OpenAction();
 
     protected void PlayOpenedSound(){
         openedAudioSource.Play();

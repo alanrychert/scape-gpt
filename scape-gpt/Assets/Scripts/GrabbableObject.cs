@@ -5,7 +5,6 @@ using UnityEngine;
 public class GrabbableObject : Interactable
 {
     private bool isGrabbed;
-    private Vector3 originalRotation;
     private Rigidbody _rigidBody;
     [SerializeField] PlayerController player;
 

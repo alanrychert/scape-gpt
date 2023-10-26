@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class KeyObject : GrabbableObject
 {
-    [SerializeField] private Vector3 shelfScale;
-    public void Dissapear(){
+    public virtual void Use(){
         Destroy(gameObject);
     }
 
@@ -17,13 +16,9 @@ public class KeyObject : GrabbableObject
     {
         if (objToOpen != null)
         {
-            objToOpen.TryOpen(this); // Llamará automáticamente al TryOpen correcto según el tipo
+            objToOpen.TryOpen(this);
         }
         else
             FallToTheFloor();
-    }
-
-    public void ToShelfScale(){
-        transform.localScale = shelfScale;
     }
 }
