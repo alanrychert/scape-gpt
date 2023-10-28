@@ -5,12 +5,15 @@ using TMPro;
 
 public class WriteableBook : UnlockableInteractable
 {
-    [SerializeField] TextMeshProUGUI text ;
+    [SerializeField] TextMeshProUGUI FirstPageText;
+    [SerializeField] TextMeshProUGUI SecondPageText;
 
     protected override void Start(){
-        text.enabled = false;
+        FirstPageText.enabled = false;
+        SecondPageText.enabled = false;
     }
     protected override void OpenAction(){
-        text.enabled = true;
+        FirstPageText.enabled = true;
+        SecondPageText.enabled = true;
     }
 }

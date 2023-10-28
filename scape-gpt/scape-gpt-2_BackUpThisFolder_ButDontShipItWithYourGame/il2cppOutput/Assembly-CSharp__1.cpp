@@ -4733,8 +4733,10 @@ struct UnlockableInteractableDoor_t01420E03BC6752D49194AC2516A3431D5E3E40F3  : p
 // WriteableBook
 struct WriteableBook_tFB6DA43C99CDA4C84992966842E9844AC084F0A7  : public UnlockableInteractable_tA9826D546799A168C78FA86C05A80109A4F69F58
 {
-	// TMPro.TextMeshProUGUI WriteableBook::text
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___text_10;
+	// TMPro.TextMeshProUGUI WriteableBook::FirstPageText
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___FirstPageText_10;
+	// TMPro.TextMeshProUGUI WriteableBook::SecondPageText
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___SecondPageText_11;
 };
 
 // ShelfKeyObject
@@ -23038,10 +23040,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnlockableInteractableDoor__ctor_m48E970
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WriteableBook_Start_mEDBCD1FF1897FD23CF2AB3A731A35DCC50DFEFFD (WriteableBook_tFB6DA43C99CDA4C84992966842E9844AC084F0A7* __this, const RuntimeMethod* method) 
 {
 	{
-		// text.enabled = false;
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___text_10;
+		// FirstPageText.enabled = false;
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___FirstPageText_10;
 		NullCheck(L_0);
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_0, (bool)0, NULL);
+		// SecondPageText.enabled = false;
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_1 = __this->___SecondPageText_11;
+		NullCheck(L_1);
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_1, (bool)0, NULL);
 		// }
 		return;
 	}
@@ -23050,10 +23056,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WriteableBook_Start_mEDBCD1FF1897FD23CF2
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WriteableBook_OpenAction_m9D8556D03DA450A4331BD05A161779345DB453FE (WriteableBook_tFB6DA43C99CDA4C84992966842E9844AC084F0A7* __this, const RuntimeMethod* method) 
 {
 	{
-		// text.enabled = true;
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___text_10;
+		// FirstPageText.enabled = true;
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___FirstPageText_10;
 		NullCheck(L_0);
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_0, (bool)1, NULL);
+		// SecondPageText.enabled = true;
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_1 = __this->___SecondPageText_11;
+		NullCheck(L_1);
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_1, (bool)1, NULL);
 		// }
 		return;
 	}

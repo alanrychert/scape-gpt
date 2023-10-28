@@ -2695,15 +2695,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 481936, guid: f244d85ca954f4336a1a7595053efbfc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.018
+      value: -0.082
       objectReference: {fileID: 0}
     - target: {fileID: 481936, guid: f244d85ca954f4336a1a7595053efbfc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07999998
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 481936, guid: f244d85ca954f4336a1a7595053efbfc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.253
+      value: -0.351
       objectReference: {fileID: 0}
     - target: {fileID: 481936, guid: f244d85ca954f4336a1a7595053efbfc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4664,7 +4664,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196512885}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4945,7 +4945,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206814692}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6635,7 +6635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3034a7c7c69bc41a0e219c251b7b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Cofre con candado cerrado
+  description: Cofre con candado cerrado con una cruz roja
   openedAudioSource: {fileID: 521593652}
 --- !u!65 &316289038
 BoxCollider:
@@ -9571,7 +9571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72eaeb1533f75494a86bb83596a98e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: "vidriera vac\xEDa con simbolo de un frasco"
+  description: "vidriera vac\xEDa con un simbolo de un frasco"
   key: {fileID: 1915713561}
   lockedAudioSource: {fileID: 925450246}
   openedAudioSource: {fileID: 521593652}
@@ -14676,7 +14676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 418962, guid: cc45d25784d134031be721e31c3c239f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.204
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 418962, guid: cc45d25784d134031be721e31c3c239f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15296,11 +15296,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 420528, guid: c08b700bc96ee446685910832e6b01ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4
+      value: 0.245
       objectReference: {fileID: 0}
     - target: {fileID: 420528, guid: c08b700bc96ee446685910832e6b01ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07999998
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 420528, guid: c08b700bc96ee446685910832e6b01ad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15918,7 +15918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: Silla de madera
-  PushingVelocity: 14
+  PushingVelocity: 25
 --- !u!54 &755259312
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18179,7 +18179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 464830, guid: fb5a9652227c545d98a413cd73b80b69, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.361
+      value: -0.255
       objectReference: {fileID: 0}
     - target: {fileID: 464830, guid: fb5a9652227c545d98a413cd73b80b69, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21047,7 +21047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d0907bad5387b45b489e8b4011e848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Moneda de oro
+  description: "Moneda de oro que cay\xF3 luego de agarrar la antorcha"
   player: {fileID: 907292811}
 --- !u!65 &959635051
 BoxCollider:
@@ -25183,20 +25183,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5129442236857904303, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
   m_PrefabInstance: {fileID: 1284208343}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1120031275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120031274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cca98fc25a337a47b91f766d93ffb3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  description: Caja de madera
-  PushingVelocity: 10
 --- !u!54 &1120031276
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -25211,13 +25197,27 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!4 &1120031280 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
   m_PrefabInstance: {fileID: 1284208343}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1120031284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120031274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d0907bad5387b45b489e8b4011e848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Caja de madera
+  player: {fileID: 907292811}
 --- !u!1001 &1125031205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28185,7 +28185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d0907bad5387b45b489e8b4011e848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Moneda de oro
+  description: "Moneda de oro que cay\xF3 luego de agarrar la antorcha"
   player: {fileID: 907292811}
 --- !u!54 &1242588329
 Rigidbody:
@@ -29209,7 +29209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08a3e12eab7dd3409ceef2ff30b2cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Cuadro de una pluma escribiendo en un libro
+  description: a escribiendo en un librobiendo en un libro
 --- !u!65 &1292271341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32333,16 +32333,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Anguluz
+  m_text: 'Perspectiva
 
 
-    colcaren
+    de
 
 
-    efectus
+    claridad
 
 
-    claritis'
+    variada'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -35200,12 +35200,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 755718ffb91a1084aaab4847cd7b0fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: "Libro con una p\xE1gina escrita que dice \"angulus colcaren efectus
-    claritis\" y otra pagina en blanco"
+  description: "Libro con una p\xE1gina escrita que dice 'perspectiva de claridad
+    variada' y otra pagina en blanco"
   key: {fileID: 2037221871}
   lockedAudioSource: {fileID: 925450246}
   openedAudioSource: {fileID: 521593652}
-  text: {fileID: 1736492060}
+  FirstPageText: {fileID: 1736492060}
+  SecondPageText: {fileID: 1439240562}
 --- !u!1 &1634468841
 GameObject:
   m_ObjectHideFlags: 0
@@ -35955,7 +35956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: Caja de madera
-  PushingVelocity: 14
+  PushingVelocity: 25
 --- !u!54 &1666867059
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -36589,7 +36590,7 @@ GameObject:
   - component: {fileID: 1699254142}
   - component: {fileID: 1699254141}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: Canvas 2
   m_TagString: Something
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36602,7 +36603,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699254139}
-  m_LocalRotation: {x: 0.70441604, y: -0.06162843, z: -0.06162843, w: 0.70441604}
+  m_LocalRotation: {x: 0.7010574, y: -0.09229592, z: -0.09229592, w: 0.7010574}
   m_LocalPosition: {x: 0, y: 0, z: -0.028}
   m_LocalScale: {x: 1.4285717, y: 1.1785713, z: 0.071428575}
   m_ConstrainProportionsScale: 0
@@ -36610,10 +36611,10 @@ RectTransform:
   - {fileID: 1439240561}
   m_Father: {fileID: 1385493419}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 100, y: 90, z: 90}
+  m_LocalEulerAnglesHint: {x: 105, y: 90, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.227, y: 0.064}
+  m_AnchoredPosition: {x: -0.223, y: 0.075}
   m_SizeDelta: {x: 0.1, y: 0.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1699254141
@@ -37970,8 +37971,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08a3e12eab7dd3409ceef2ff30b2cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: vidriera con simbolo de una llave, que tiene un candado dentro y debajo
-    un numero 4
+  description: vidriera con un simbolo de una llave, que tiene un candado dentro
+    y debajo un numero 4
 --- !u!1001 &1789063373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38281,7 +38282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 456368, guid: db1c94431d2a64a068f8c904090cee66, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 456368, guid: db1c94431d2a64a068f8c904090cee66, type: 3}
       propertyPath: m_LocalPosition.y
@@ -39863,7 +39864,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878323501}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.3}
+  m_LocalPosition: {x: 0, y: 0, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39873,7 +39874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.444, y: -1}
+  m_AnchoredPosition: {x: 0.44, y: -1}
   m_SizeDelta: {x: 0.1, y: 0.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1878323503
@@ -40809,7 +40810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 418962, guid: cc45d25784d134031be721e31c3c239f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.251
+      value: -0.862
       objectReference: {fileID: 0}
     - target: {fileID: 418962, guid: cc45d25784d134031be721e31c3c239f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -43932,7 +43933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72eaeb1533f75494a86bb83596a98e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: "vidriera vac\xEDa con simbolo de espada"
+  description: "vidriera vac\xEDa con un simbolo de espada"
   key: {fileID: 33524309775279826}
   lockedAudioSource: {fileID: 925450246}
   openedAudioSource: {fileID: 521593652}
@@ -44456,7 +44457,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08a3e12eab7dd3409ceef2ff30b2cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Calavera con un simbolo triangular rojo que parece salir de los ojos
+  description: Calavera con un simbolo triangular rojo que parece salir de los ojos, 
+    y un texto espejado al rededor que dice 'looks dead'
 --- !u!1 &2125469221
 GameObject:
   m_ObjectHideFlags: 0
@@ -51991,7 +51993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d0907bad5387b45b489e8b4011e848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Antorcha de pared encendida
+  description: Antorcha de pared encendida al lado de la puerta
   player: {fileID: 907292811}
 --- !u!4 &8155949894513625722
 Transform:

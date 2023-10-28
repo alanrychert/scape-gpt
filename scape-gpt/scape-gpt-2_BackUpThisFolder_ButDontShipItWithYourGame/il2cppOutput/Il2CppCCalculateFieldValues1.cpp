@@ -12698,8 +12698,10 @@ struct TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C  : public Poin
 // WriteableBook
 struct WriteableBook_tFB6DA43C99CDA4C84992966842E9844AC084F0A7  : public UnlockableInteractable_tA9826D546799A168C78FA86C05A80109A4F69F58
 {
-	// TMPro.TextMeshProUGUI WriteableBook::text
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___text_10;
+	// TMPro.TextMeshProUGUI WriteableBook::FirstPageText
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___FirstPageText_10;
+	// TMPro.TextMeshProUGUI WriteableBook::SecondPageText
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___SecondPageText_11;
 };
 
 // ShelfKeyObject
@@ -19577,9 +19579,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4014[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4015[3] = 
 {
 	static_cast<int32_t>(offsetof(UnlockableInteractable_tA9826D546799A168C78FA86C05A80109A4F69F58, ___key_7)),static_cast<int32_t>(offsetof(UnlockableInteractable_tA9826D546799A168C78FA86C05A80109A4F69F58, ___lockedAudioSource_8)),static_cast<int32_t>(offsetof(UnlockableInteractable_tA9826D546799A168C78FA86C05A80109A4F69F58, ___openedAudioSource_9)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4017[1] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4017[2] = 
 {
-	static_cast<int32_t>(offsetof(WriteableBook_tFB6DA43C99CDA4C84992966842E9844AC084F0A7, ___text_10)),};
+	static_cast<int32_t>(offsetof(WriteableBook_tFB6DA43C99CDA4C84992966842E9844AC084F0A7, ___FirstPageText_10)),static_cast<int32_t>(offsetof(WriteableBook_tFB6DA43C99CDA4C84992966842E9844AC084F0A7, ___SecondPageText_11)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4018[3] = 
 {
 	static_cast<int32_t>(offsetof(AndroidDebug_tBEADC7B68E8D668A75418286BE0FCE9AEBD54005, ___txtLog_4)),static_cast<int32_t>(offsetof(AndroidDebug_tBEADC7B68E8D668A75418286BE0FCE9AEBD54005, ___txtNewLog_5)),static_cast<int32_t>(offsetof(AndroidDebug_tBEADC7B68E8D668A75418286BE0FCE9AEBD54005, ___RmsBar_6)),};
