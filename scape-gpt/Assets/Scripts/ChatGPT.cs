@@ -27,7 +27,7 @@ public class ChatGPT : MonoBehaviour
     private string promptHeader = "Contexto: Actuaras como el acompañante de un jugador que quiere resolver esta sala de escape. \n";
     private string promptPossibleActionsList= "Es importante recalcar que el jugador solo puede agarrar, soltar, empujar, abrir, y colocar objetos en otros. No puede hacer ninguna otra acción. No se puede interactuar con todos los objetos. \n";
     private string promptObjectListStart = "El jugador solo vio los objetos listados a continuación, si aparece un mismo objeto más de una vez, es porque el jugador vio más de uno en la sala: Caja ";
-    private string promptTail = "Dado que no sabes qué interacciones se puede realizar con cada objeto, sientete libre de sugerir cosas sensatas, pero nunca asegures que el jugador puede hacer algo con un objeto específico.\n";
+    private string promptTail = "\n Dado que no sabes qué interacciones se puede realizar con cada objeto, siéntete libre de sugerir cosas sensatas, pero nunca asegures que el jugador puede hacer algo con un objeto específico.\n";
     private string playerQuestionHeader = "Tu tarea como acompañante: basandote en el contexto dado pero sin mencionarlo explicitamente. IMPORTANTE: respondele al jugador, no a la totalidad de este prompt. La consulta del jugador es:\n";
     // Send a request to the OpenAI GPT-3 API and return the response as a string
     private IEnumerator SendRequest(string input, System.Action<string> onComplete)
