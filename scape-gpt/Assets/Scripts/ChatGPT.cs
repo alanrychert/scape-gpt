@@ -22,23 +22,21 @@ public class ChatGPT : MonoBehaviour
     // The endpoint for the OpenAI GPT-3 API
     private string endpoint = "https://api.openai.com/v1/completions";
 
-    // The maximum length of the response from the API
-    private int maxResponseLength = 256;
-
     private RequestBodyChatGPT requestBodyChatGPT;
     private ResponseBodyChatGPT responseBodyChatGPT;
-    private string promptHeader = "En este momento vas a actuar como si fueras el dueño de una sala de escape, que da pistas de no más de 10 palabras. Para responder a esta consulta solo podes tener en cuenta la informacion que te daré a continuacion:";
-
+    private string promptHeader = "Contexto: Actuaras como el acompañante de un jugador que quiere resolver esta sala de escape. \n";
+    private string promptPossibleActionsList= "Es importante recalcar que el jugador solo puede agarrar, soltar, empujar, abrir, y colocar objetos en otros. No puede hacer ninguna otra acción. No se puede interactuar con todos los objetos. \n";
+    private string promptObjectListStart = "El jugador solo vio los objetos listados a continuación, si aparece un mismo objeto más de una vez, es porque el jugador vio más de uno en la sala: Caja ";
+    private string promptTail = "\n Dado que no sabes qué interacciones se puede realizar con cada objeto, siéntete libre de sugerir cosas sensatas, pero nunca asegures que el jugador puede hacer algo con un objeto específico.\n";
+    private string playerQuestionHeader = "Tu tarea como acompañante: basandote en el contexto dado pero sin mencionarlo explicitamente. IMPORTANTE: respondele al jugador, no a la totalidad de este prompt. La consulta del jugador es:\n";
     // Send a request to the OpenAI GPT-3 API and return the response as a string
     private IEnumerator SendRequest(string input, System.Action<string> onComplete)
     {
-
-        // Set up the request body
         requestBodyChatGPT = new RequestBodyChatGPT();
-        requestBodyChatGPT.model = "text-davinci-003";
-        requestBodyChatGPT.prompt = promptHeader + "En la habitación se encuentran los siguientes objetos:" + player.roomInformation + "la pregunta es:" + input;
-        requestBodyChatGPT.max_tokens = maxResponseLength;
-        requestBodyChatGPT.temperature = 0;
+        requestBodyChatGPT.model = "gpt-3.5-turbo-instruct";
+        requestBodyChatGPT.prompt = input;
+        requestBodyChatGPT.max_tokens = 512;
+        requestBodyChatGPT.temperature = 1f;
 
         string JsonData = JsonUtility.ToJson(requestBodyChatGPT);
 
@@ -47,9 +45,6 @@ public class ChatGPT : MonoBehaviour
 
         requestChatGPT.uploadHandler = new UploadHandlerRaw(rawData);
         requestChatGPT.downloadHandler = new DownloadHandlerBuffer();
-
-        //-H "Content-Type: application/json" \
-        //-H "Authorization: Bearer $OPENAI_API_KEY" \
 
         requestChatGPT.SetRequestHeader("Content-Type", "application/json");
         requestChatGPT.SetRequestHeader("Authorization", "Bearer " + apiKey);
@@ -65,58 +60,54 @@ public class ChatGPT : MonoBehaviour
         {
             Debug.LogError("Error sending request to ChatGPT API: " + requestChatGPT.result);
         }
-    
+        
         requestChatGPT.Dispose();
     }
-    
-    public void MakeRequest(string input)
+
+    public void MakeRequest(string playerQuestion)
     {
-        var inputAskingSpanishResponse = input + ", y contestame en espaniol por favor.";
-        Debug.Log("Hola voy a llamar a chatgpt");
-        StartCoroutine(SendRequest(inputAskingSpanishResponse, (response) =>
+        string requestInput = promptHeader + promptPossibleActionsList + promptObjectListStart + player.roomInformation + "\n" + playerQuestionHeader + playerQuestion + promptTail;
+        Debug.Log("Hola la consulta entera fue: " +requestInput);
+        Debug.Log("casualmente lo que vio el usuario es: "+player.roomInformation);
+        StartCoroutine(SendRequest(requestInput, (response) =>
         {
             speechTextManager.StartSpeaking(response);
-            Debug.Log("Hola ya llamé a chatgpt");
-//            uIText.text = "response";
-            //<uses-permission android:name="android.permission.INTERNET" />
+            Debug.Log("Hola la respuesta entera fue: " +response);
         }));
     }
-}
 
-[Serializable]
-public class RequestBodyChatGPT
-{
-    public string model;
-    public string prompt;
-    public int max_tokens;
-    public int temperature;
-}
+    [Serializable]
+    public class RequestBodyChatGPT
+    {
+        public string model;
+        public string prompt;
+        public int max_tokens;
+        public float temperature;
+    }
 
-// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
-[Serializable]
-public class ResponseBodyChatGPT
-{
-    public string id ;
-    public string @object ;
-    public int created ;
-    public string model ;
-    public List<Choice> choices ;
-    public Usage usage ;
+    [Serializable]
+    public class Message
+    {
+        public string role;
+        public string content;
+    }
+
+    [Serializable]
+    public class ResponseBodyChatGPT
+    {
+        public string id ;
+        public string @object ;
+        public int created ;
+        public string model ;
+        public List<Choice> choices ;
+    }
 
     [Serializable]
     public class Choice
     {
-        public string text ;
-        public int index ;
-        public object logprobs ;
-        public string finish_reason ;
-    }
-
-    [Serializable]
-    public class Usage
-    {
-        public int prompt_tokens ;
-        public int completion_tokens ;
-        public int total_tokens ;
+        public object logprobs;
+        public int index;
+        public string finish_reason;
+        public string text;
     }
 }

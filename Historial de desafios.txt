@@ -1,0 +1,7 @@
+Primer desafío:
+Configurar el proyecto de unity para el desarrollo de una aplicación de realidad virtual en Android
+Mediante GoogleCardboard, implementar selección con la mirada (GazeSelection)
+Implementar movimiento del jugador (con control bluetooth)
+Implementar colisiones entre el jugador y el entorno (que el jugador no pueda atravesar objetos)
+Implementar interacciones mediante los botones del control bluetooth
+Diseño e implementación de los desafíos de la sala de escape

@@ -2,19 +2,41 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-public abstract class RoomObject: MonoBehaviour
+public class RoomObject: MonoBehaviour
 {
     protected bool hasBeenSeen;
-    private PlayerController player;
-
+    [SerializeField] private string description;
+    protected Renderer objectRenderer;
     protected virtual void Start(){
-        player = FindObjectOfType<PlayerController>();
         hasBeenSeen = false;
+        objectRenderer = GetComponent<Renderer>();
     }
 
-    public void OnPointerEnterXR(){
-        player.roomInformation+=getDescription();
+    public virtual void Accept(IVisitor v){
+        v.VisitRoomObject(this);
     }
 
-    public abstract string getDescription();
+    public virtual void See(IVisitor v){
+        v.SeeRoomObject(this);
+    }
+
+    public string GetDescription(){
+        string result = "";
+        if (!hasBeenSeen){
+            result+=description;
+            hasBeenSeen = true;
+            Debug.Log(description);
+        }
+        return result;
+    }
+
+    public virtual void TryOpen(GrabbableObject grabbable)
+    {
+        grabbable.FallToTheFloor();
+    }
+
+    public void SetVisibility(bool isVisible)
+    {
+        objectRenderer.enabled = isVisible;
+    }
 }

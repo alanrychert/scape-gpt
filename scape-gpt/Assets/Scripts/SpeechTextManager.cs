@@ -70,8 +70,9 @@ public class SpeechTextManager : MonoBehaviour
 
     public void OnFinalSpeechResult(string prompt)
     {
-        Debug.Log("Hola esto es onfinalspeechresult");
+        Debug.Log("hola envio lo que dijiste a chatgpt");
         prompt = prompt.ToLower(); 
+        Debug.Log(prompt);
         // if (virtualAssistant.activeInHierarchy && prompt != "desactivar asistente"){
             chatGPT.MakeRequest(prompt);
         // }
@@ -91,6 +92,7 @@ public class SpeechTextManager : MonoBehaviour
 
     public void StartSpeaking (string message)
     {
+        Debug.Log("hola digo lo que contesta chatgpt");
         TextToSpeech.Instance.StartSpeak(message);
         //uIText.text = "Teoricamente hablando";
     }

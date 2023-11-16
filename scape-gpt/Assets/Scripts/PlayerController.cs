@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IVisitor
 {
     public float Speed = 3.5f;
     private float Gravity = 10f;
     private bool hasGrabbedSomething;
-    private GameObject _gazedObject;
+    private RoomObject _gazedObject;
     private GrabbableObject _grabbedObject;
     public GameObject playerHand;
-    public CameraPointerManager playerCamera;
-    private readonly string interactableTag = "Interactable";
+    public ObjectDetector playerCamera;
+    public SpeechTextManager speechTextManager;
     public string roomInformation { get; set; }
 
     private CharacterController controller;
@@ -19,46 +19,31 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        playerCamera.OnNewObjectDetected += HandleNewObjectDetected;
-        playerCamera.OnNoObjectDetected += HandleNoObjectDetected;
-        GazeManager.Instance.OnGazeSelection += GazeSelection;
+        // playerCamera.OnNewObjectDetected += HandleNewObjectDetected;
+        // playerCamera.OnNoObjectDetected += HandleNoObjectDetected;
         roomInformation = "";
     }
 
     // Update is called once per frame
     void Update()
     {
+        _gazedObject = playerCamera.Detect();
+        if (_gazedObject != null)
+            _gazedObject.See(this);
+        else 
+            playerCamera.ShowInteractText(false);
         PlayerMovement();
-            if (Input.GetButtonDown("Fire1")){
-                if (!_grabbedObject){
-                    Debug.Log(_grabbedObject);
-                    _gazedObject?.SendMessage("OnFire1PressedXR", this, SendMessageOptions.DontRequireReceiver);
-                }
-                else{
-                    Debug.Log(_grabbedObject);
-                    _grabbedObject?.SendMessage("OnFire1PressedXR", this, SendMessageOptions.DontRequireReceiver);
-                    
-                }
-                // if (!_grabbedObject){
-                //     if(_gazedObject)
-                //         if (_gazedObject.CompareTag(grabbableTag) || _gazedObject.CompareTag(keyTag)){
-                //             _grabbedObject=_gazedObject;
-                //             _grabbedObject.transform.SetParent(playerHand.transform);
-                //             _grabbedObject.transform.localPosition = new Vector3(0, -0.1f, -0.1f);
-                //         }
-                // }
-                // else{
-                //     _grabbedObject.transform.localPosition = new Vector3(0, 0, 2);
-                //     _grabbedObject.transform.SetParent(null);
-                //     _grabbedObject = null;
-                // }
+        if (Input.GetButtonDown("Fire1")){
+            if (!_grabbedObject){
+                _gazedObject?.Accept(this);
             }
+            else{
+                _grabbedObject.Accept(this);
+            }
+        }
+        else
             if (Input.GetButtonDown("Fire2"))
-                _gazedObject?.SendMessage("OnFire2PressedXR", this, SendMessageOptions.DontRequireReceiver);
-            if (Input.GetButtonDown("Fire3"))
-                _gazedObject?.SendMessage("OnFire3PressedXR", null, SendMessageOptions.DontRequireReceiver);
-            if (Input.GetButtonDown("Jump"))
-                _gazedObject?.SendMessage("OnJumpPressedXR", null, SendMessageOptions.DontRequireReceiver);
+                speechTextManager.StopSpeaking();
     }
 
     void PlayerMovement(){
@@ -71,50 +56,63 @@ public class PlayerController : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    private void HandleNewObjectDetected(RaycastHit detected)
-    {
-        if (_grabbedObject && _grabbedObject != _gazedObject || !_grabbedObject){
-            if (_gazedObject != detected.transform.gameObject){
-                _gazedObject?.SendMessage("OnPointerExitXR", this, SendMessageOptions.DontRequireReceiver);
-                _gazedObject = detected.transform.gameObject;
-                _gazedObject.SendMessage("OnPointerEnterXR", null, SendMessageOptions.DontRequireReceiver);
-                Debug.Log("new object detected: ");
-                if (_gazedObject.CompareTag(interactableTag))
-                    GazeManager.Instance.StartGazeSelection();
-                else
-                    GazeManager.Instance.CancelGazeSelection();
-            }
-            if (!detected.transform.CompareTag("Untagged")) {    
-                playerCamera.PointerOnGaze(detected.point);
-            }    
-            else{
-                playerCamera.pointerOutGaze();
-            }
-        }
-    }
-
-    private void GazeSelection(){
-        _gazedObject?.SendMessage("OnPointerClickXR", null, SendMessageOptions.DontRequireReceiver);
-    }
-
-    private void HandleNoObjectDetected()
-    {
-        if (_gazedObject != null){
-                _gazedObject?.SendMessage("OnPointerExitXR", null, SendMessageOptions.DontRequireReceiver);
-                _gazedObject = null;
-                playerCamera.pointerOutGaze();
-        }
-    }
-
     public void GrabObject(GrabbableObject obj){
         _grabbedObject = obj;
     }
     public void DropObject(){
         _grabbedObject = null;
     }
-    private void OnDestroy()
-    {
-        playerCamera.OnNewObjectDetected -= HandleNewObjectDetected;
-        playerCamera.OnNoObjectDetected -= HandleNoObjectDetected;
+
+    public bool HasGrabbedSomething(){
+        return hasGrabbedSomething;
+    }
+    public void VisitKeyObject(KeyObject keyObject){
+        if (!keyObject.IsGrabbed()){
+            keyObject.MoveToObject(playerHand);
+            _grabbedObject = keyObject;
+        }
+        else
+        {
+            Debug.Log(_gazedObject);
+            keyObject.TryOpen(_gazedObject);
+        }
+    }
+
+    public void VisitGrabbable(GrabbableObject grabbable){
+        if (!grabbable.IsGrabbed()){
+            grabbable.MoveToObject(playerHand);
+            _grabbedObject = grabbable;
+        }
+        else
+        {
+            grabbable.FallToTheFloor();
+            _grabbedObject = null;
+        }
+    }
+    public void VisitRoomObject(RoomObject roomObject){}
+    public void VisitOpenable(OpenableObject openable){
+        openable.Open();
+    }
+    public void VisitUnlockableInteractable(UnlockableInteractable unlockableInteractable){
+        unlockableInteractable.TryOpen(_grabbedObject);
+    }
+    public void VisitKeyboardObject(KeyboardObject keyboardObject){
+        keyboardObject.Write();
+    }
+    public void VisitPushable(PushableObject pushable){
+        Vector3 playerForward = playerCamera.transform.forward;
+        pushable.Push(playerForward);
+    }
+    public void SeeInteractable(Interactable interactable){
+        playerCamera.ShowInteractText(true);
+        var description = interactable.GetDescription();
+        if (description.Length>0)
+            roomInformation += ", " + description;
+    }
+    public void SeeRoomObject(RoomObject roomObject){
+        playerCamera.ShowInteractText(false);
+        var description = roomObject.GetDescription();
+        if (description.Length>0)
+            roomInformation += ", " + description; 
     }
 }
