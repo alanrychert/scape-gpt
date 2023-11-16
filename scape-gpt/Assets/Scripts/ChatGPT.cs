@@ -15,9 +15,7 @@ public class ChatGPT : MonoBehaviour
     //[SerializeField] private TextMeshProUGUI uIText;
 
     // Replace with your own OpenAI API key
-    // vieja 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
-    //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
-    private string apiKey = "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";
+    private string apiKey = "";
 
     // The endpoint for the OpenAI GPT-3 API
     private string endpoint = "https://api.openai.com/v1/completions";
