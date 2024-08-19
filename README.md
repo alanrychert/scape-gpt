@@ -17,8 +17,7 @@ For voice-based communication between the user and the AI assistant, the project
 
 ## Installation and Setup
 
-Clone the repository:
--  git clone https://github.com/yourusername/scape-gpt.git
+-    Clone the repository: git clone https://github.com/alanrychert/scape-gpt
 -  Open the project in Unity 3D.
 -  In the ChatGPT.cs file, located at Assets/Scripts/ChatGPT.cs, replace YOUR_API_KEY at line 18 with your actual OpenAI API key
     - Private string apiKey = "YOUR_API_KEY";
@@ -36,4 +35,4 @@ University: Universidad Nacional del Sur
 Year: 2024
 
 ## Acknowledgments
-Special thanks to my proffessors Dr. Matias Selzer and Dr. María Lujan Ganuza, and to khanhuitse05 for the development of the "Speech And Text in Unity iOS and Unity Android" package used in this project.
+Special thanks to my professors Dr. Matias Selzer and Dr. María Lujan Ganuza, and to khanhuitse05 for the development of the "Speech And Text in Unity iOS and Unity Android" package used in this project.
