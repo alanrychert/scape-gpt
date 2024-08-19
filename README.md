@@ -21,7 +21,7 @@ Clone the repository:
 -  git clone https://github.com/yourusername/scape-gpt.git
 -  Open the project in Unity 3D.
 -  In the ChatGPT.cs file, located at Assets/Scripts/ChatGPT.cs, replace YOUR_API_KEY at line 18 with your actual OpenAI API key
--    private string apiKey = "YOUR_API_KEY";
+    - Private string apiKey = "YOUR_API_KEY";
 -  Build and run the project on a compatible Android or iOS device with Google Cardboard.
 
 ## Dependencies
