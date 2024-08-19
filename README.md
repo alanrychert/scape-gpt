@@ -25,14 +25,14 @@ For voice-based communication between the user and the AI assistant, the project
 
 ## Dependencies
 
-Unity 3D: Version 2020.3 or later.
-Google Cardboard SDK: For VR support.
-Speech And Text in Unity iOS and Unity Android: For voice interaction.
+-    Unity 3D: Version 2020.3 or later.
+-    Google Cardboard SDK: For VR support.
+-    Speech And Text in Unity iOS and Unity Android: For voice interaction.
 
 ## Author
-Name: Alan Rychert
-University: Universidad Nacional del Sur
-Year: 2024
+-    Name: Alan Rychert
+-    University: Universidad Nacional del Sur
+-    Year: 2023
 
 ## Acknowledgments
 Special thanks to my professors Dr. Matias Selzer and Dr. María Lujan Ganuza, and to khanhuitse05 for the development of the "Speech And Text in Unity iOS and Unity Android" package used in this project.
